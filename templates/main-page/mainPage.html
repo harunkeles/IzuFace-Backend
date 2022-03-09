@@ -1,0 +1,24 @@
+{% extends 'index.html' %}
+
+
+{% block content %}
+
+<div id="main-page">
+    <div class="main-page__cover">
+        {% include 'parts/leftSide/leftSideMenu.html' %}
+        <div class="middle-side-contents">
+            <div class="middle-side__cover">
+                {% include 'parts/search/searchCard-1/searchCard-1.html' %}
+                {% include 'parts/announcements/announcementsCard-1/announcementsCard-1.html' %}
+                {% include 'parts/news/newsCard-1/newsCard-1.html' %}
+                {% include 'parts/activities/activitiesCard-1/activitiesCard-1.html' %}
+                {% include 'parts/posts/lastPostsCard-1/lastPostsCard-1.html' %}
+            </div>
+        </div>
+        {% include 'parts/rightSide/rightSideContents.html' %}
+    </div>
+</div>
+
+
+
+{% endblock %}

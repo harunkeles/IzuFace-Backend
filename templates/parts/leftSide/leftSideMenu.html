@@ -1,0 +1,120 @@
+{% block content %}
+<div id="bg-blur"></div>
+<div id="leftSideMenu" class="left-side-fixed-menu">
+    <input type="checkbox" id="menu-control" class="menu-control" >
+    <div class="side-cover">
+        <label for="menu-control" class="hamburger" onclick="toggle();">
+            <i class="hamburger__icon"></i>
+            <i class="hamburger__icon"></i>
+            <i class="hamburger__icon"></i>
+        </label>
+        <label for="menu-control" class="sidebar__close" onclick="toggle();"></label>
+        <!-- <div class="izu-face-logo">
+            <img src="/static/img/main-logo.png" alt="">
+        </div> -->
+        <div class="all-menu-list">
+            <div class="list-about-user">
+                <div class="auth_user">
+                    <div class="user-info">
+                        <img class="user-img" src="{{authUser_C.0.profImage.url}}" alt="">
+                        <div class="info">
+                            <div class="rank animate__animated animate__backInLeft">
+                                        <img
+                                            src="https://img.icons8.com/external-bearicons-glyph-bearicons/64/8D939F/external-ranking-reputation-bearicons-glyph-bearicons.png" />
+                                        <span>140</span>
+                            </div>
+                            <div class="follow animate__animated animate__backInLeft">
+                                        <img src="https://img.icons8.com/external-tal-revivo-color-tal-revivo/24/000000/external-securing-a-future-by-a-health-policy-protection-color-tal-revivo.png" />
+                                        <span>12</span>
+                            </div>
+                            <div class="reliable animate__animated animate__backInLeft">
+                                        <img src="https://img.icons8.com/ios-filled/50/00AA00/filled-circle.png" />
+                                        <span>5%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="user-name animate__animated animate__backInLeft">{{authUser_C.0.user.first_name}} {{authUser_C.0.user.last_name}}</span>
+                </div>
+                <div class="auth_user_menus">
+                    <a href="{% url 'myprofile' %}" class="myprofile">
+                        <img src="https://img.icons8.com/external-sbts2018-outline-sbts2018/50/8D939F/external-profile-social-media-basic-1-sbts2018-outline-sbts2018.png"/>
+                        <span>Profilim</span>
+                    </a>
+                    <a href="" class="mypage">
+                        <img src="https://img.icons8.com/48/8D939F/login-as-user.png" />
+                        <span>My Face</span>
+                    </a>
+                    <a href="" class="notification">
+                        <img src="https://img.icons8.com/color/40/000000/appointment-reminders--v1.png" />
+                        <span>Bildirimlerim</span>
+                    </a>
+                    <a href="" class="my-favorities">
+                        <img src="https://img.icons8.com/fluency/36/000000/bookmark-ribbon.png" />
+                        <span>Favorilerim</span>
+                    </a>
+                </div>
+            </div>
+            <div class="list-global-menu">
+                <ul>
+                    <li {% if request.path == '/' %} class="main-page active" {% else %} class="main-page" {% endif %}>
+                        <a href="{% url 'mainPage' %}">
+                            <img src="/static/img/home.png" />
+                            <span>Anasayfa</span>
+                        </a>
+                    </li>
+                    <li {% if request.path == '/posts/all-posts/' %} class="all_posts active" {% else %} class="all_posts"
+                        {% endif %}>
+                        <a href="{% url 'all_posts' %}">
+                            <img src="https://img.icons8.com/plumpy/36/000000/content.png" />
+                            <span>Bütün Postlar</span></a>
+                    </li>
+                    <li {% if request.path == '/news/all-news/' %} class="news active" {% else %} class="news" {% endif %}>
+                        <a href="{% url 'all_news' %}">
+                            <img src="/static/img/news.png" />
+                            <span>Haberler</span></a>
+                    </li>
+                    <li class="activities">
+                        <a href="">
+                            <img src="/static/img/events.png" />
+                            <span>Etkinlikler</span></a>
+                    </li>
+                    <li class="educations">
+                        <a href="">
+                            <img src="/static/img/educations.png" />
+                            <span>Bölümler</span></a>
+                    </li>
+                    <li class="clups">
+                        <a href="">
+                            <img src="/static/img/clubs.png" />
+                            <span>Kulüpler</span></a>
+                    </li>
+                    <li class="sports">
+                        <a href="">
+                            <img src="/static/img/sports.png" />
+                            <span>Spor</span></a>
+                    </li>
+                    <li class="suggestions">
+                        <a href="">
+                            <img
+                                src="https://img.icons8.com/external-victoruler-linear-colour-victoruler/64/000000/external-suggestion-business-and-finance-victoruler-linear-colour-victoruler.png" />
+                            <span>Öneriler</span></a>
+                    </li>
+                    <li class="complaint">
+                        <a href="">
+                            <img src="https://img.icons8.com/color/48/000000/complaint.png" />
+                            <span>Şikayetler</span></a>
+                    </li>
+                    <li class="izu-campus-info">
+                        <a href="https://kampus.izu.edu.tr/login">
+                            <img src="https://kampus.izu.edu.tr/js/favicon.ico" />
+                            <span>Kampüs Bilgi Sistemi</span></a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

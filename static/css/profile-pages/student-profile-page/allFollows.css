@@ -1,0 +1,288 @@
+#studentUsersFollows {}
+
+#studentUsersFollows .studentUsersFollowsCover {}
+
+
+
+/** Followers */
+
+#studentUsersFollows .row.followers {
+    margin-bottom: 20px;
+}
+
+#studentUsersFollows .row.followers .text {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #5B616C;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+#studentUsersFollows .row.followers .content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+}
+
+#studentUsersFollows .row.followers .content-row .card {
+    width: 150px;
+    height: 200px !important;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 2px;
+    transition: linear 0.1s;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    background-color: transparent;
+}
+
+#studentUsersFollows .row.followers .content-row .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+}
+
+#studentUsersFollows .row.followers .content-row .card>a{
+    width: 100%;
+    height: 100%;
+}
+
+#studentUsersFollows .row.followers .content-row .card .card-header {
+    width: 100%;
+    height: 150px;
+    padding: 0;
+    border: none;
+
+}
+
+#studentUsersFollows .row.followers .content-row .card .card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+#studentUsersFollows .row.followers .content-row .card .card-body {
+    padding: 0;
+    width: 100%;
+}
+
+#studentUsersFollows .row.followers .content-row .card .card-body .card-text {
+    height: 100%;
+    padding: 0px 5px;
+    font-family: 'Roboto Slab', serif;
+    color: #5B616C;
+    font-size: 15px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 11px;
+}
+
+#studentUsersFollows .row.followers .see-more {
+    text-align: right;
+    margin-top: 15px;
+    padding: 0;
+}
+
+#studentUsersFollows .row.followers .see-more .more-text {
+
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+
+}
+
+#studentUsersFollows .row.followers .see-more .more-text a {
+    color: #5B616C;
+}
+
+#studentUsersFollows .row.followers .see-more .more-text span {
+    font-weight: 600;
+}
+
+
+/** Follower */
+
+#studentUsersFollows .row.followed {
+    margin-bottom: 20px;
+}
+
+#studentUsersFollows .row.followed .text {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #5B616C;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+#studentUsersFollows .row.followed .content-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 0;
+}
+
+#studentUsersFollows .row.followed .content-row .card {
+    width: 150px;
+    height: 200px !important;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 2px;
+    transition: linear 0.1s;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    background-color: transparent;
+}
+
+#studentUsersFollows .row.followed .content-row .card:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+}
+
+#studentUsersFollows .row.followed .content-row .card>a{
+    width: 100%;
+    height: 100%;
+}
+
+
+#studentUsersFollows .row.followed .content-row .card .card-header {
+    width: 100%;
+    height: 150px;
+    padding: 0;
+    border: none;
+}
+
+#studentUsersFollows .row.followed .content-row .card .card-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 7px;
+}
+
+#studentUsersFollows .row.followed .content-row .card .card-body {
+    padding: 0;
+    width: 100%;
+}
+
+#studentUsersFollows .row.followed .content-row .card .card-body .card-text {
+    height: 100%;
+    padding: 0px 5px;
+    font-family: 'Roboto Slab', serif;
+    color: #5B616C;
+    font-size: 15px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-top: 11px;
+    
+}
+
+#studentUsersFollows .row.followed .see-more {
+    text-align: right;
+    margin-top: 15px;
+    padding: 0;
+}
+
+#studentUsersFollows .row.followed .see-more .more-text {
+
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 400;
+
+}
+
+#studentUsersFollows .row.followed .see-more .more-text a {
+    color: #5B616C;
+}
+
+#studentUsersFollows .row.followed .see-more .more-text span {
+    font-weight: 600;
+}
+
+/** Clubs */
+#studentUsersFollows .row.clubs {}
+
+
+#studentUsersFollows .row.clubs {
+    margin-bottom: 20px;
+}
+
+#studentUsersFollows .row.clubs .text {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #5B616C;
+    margin-bottom: 15px;
+    padding: 0;
+}
+
+#studentUsersFollows .row.clubs .content-row {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+#studentUsersFollows .row.clubs .content-row .card {
+    width: 250px;
+    height: 60px !important;
+    border-radius: 50px;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    padding: 5px 2px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    background-color: transparent;
+    margin-bottom: 30px;
+    margin-right: 8px;
+}
+
+#studentUsersFollows .row.clubs .content-row .card .card-header {
+    width: 60px;
+    height: 60px;
+    padding: 0;
+    border-radius: 100%;
+    background-color: rgb(146, 84, 2);
+}
+
+#studentUsersFollows .row.clubs .content-row .card .card-header img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 100%;
+
+}
+
+#studentUsersFollows .row.clubs .content-row .card .card-body {
+    padding: 0;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#studentUsersFollows .row.clubs .content-row .card .card-body .card-text {
+    padding: 7px 15px;
+    font-family: 'Roboto Slab', serif;
+    color: #5B616C;
+    font-size: 15px;
+    font-weight: 600;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}

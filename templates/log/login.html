@@ -1,0 +1,55 @@
+{% block content %}
+
+<div id="login_page">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="card">
+                   
+                    {% if not user.is_authenticated %}
+                    <form method="post" class="box">
+                        {% csrf_token %}
+                        <h1 class="mb-5">Gİrİş Yap</h1>
+
+                        {% if form.errors %}
+                        <div id="errors">
+                            <div class="inner">
+                                <p>Kullanıcı adı veya şifre hatalı.</p>
+                                <ul>
+                                    {% for field in form %}
+                                    {% if field.errors %}
+                                    <li>{{ field.label }}: {{ field.errors|striptags }}</li>
+                                    {% endif %}
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                        </div>
+                        {% endif %}
+
+                        <p class="text-muted"> Kullanıcı adınızı ve şifrenizi girin. </p>
+                        <input type="text" name="username" placeholder="Kullanıcı Adı">
+                        <input type="password" name="password" placeholder="Şifre">
+                        <button type="submit" class="custom-btn btn-5"><span>GİRİŞ YAP</span></button>
+                        <div class="division"></div>
+                        <p>Üye olmak için tıkla</p>
+                        <a href="{% url 'register' %}" class="custom-btn btn-5"><span>ÜYE OL</span></a>
+
+
+                    </form>
+                    {% else %}
+                    <h1 class="taxt-center">Daha önceden giriş yaptınız.</h1>
+                    {% endif %}
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% endblock %}

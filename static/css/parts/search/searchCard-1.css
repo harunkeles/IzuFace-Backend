@@ -1,0 +1,119 @@
+/** Search Row */
+
+.searchSection {
+    width: 100%;
+    padding: 10px 10px;
+}
+
+.searchSection .search-helpers {
+    position: relative;
+    border-radius: 12px;
+    padding: 10px 0;
+    width: 100%;
+}
+
+.searchSection .search-helpers ul {
+    position: relative;
+    width: 100%;
+    height: 105px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    border-radius: 12px;
+}
+
+.searchSection .search-helpers ul li {
+    position: relative;
+    padding-right: 20px;
+    border-radius: 7px;
+    transition: 0.3s all;
+    height: 90px;
+    width: 110px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px !important;
+}
+
+
+.searchSection .search-helpers ul li:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px !important;
+}
+
+.searchSection .search-helpers ul li a {
+    position: absolute;
+
+    padding: 0 5px;
+    border-radius: 7px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+
+.searchSection .search-helpers ul li span {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 100%;
+    text-align: center;
+    color: #233B55;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+}
+
+.searchSection .search-helpers ul li a .icon {
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 60px;
+    border: 1px solid #233B55;
+}
+
+.searchSection .search-helpers ul li a .icon img{
+    width: 35px;
+    height: 35px;
+}
+
+.searchSection .search-helpers ul li .icon i {
+    font-size: 30px;
+}
+
+.searchSection .search-helpers ul li.news .icon img,
+.searchSection .search-helpers ul li.news .icon i {
+    color: #6752e0;
+}
+
+.searchSection .search-helpers ul li.complaint .icon img,
+.searchSection .search-helpers ul li.complaint .icon i {
+    color: #ff4949;
+}
+
+.searchSection .search-helpers ul li.activities .icon img{
+    color: #00b884;
+}
+.searchSection .search-helpers ul li.suggestions .icon img{
+    height: 50px;
+    width: 50px;
+}
+
+.searchSection .search-helpers ul li.ask_question .icon i {
+    color: #E2B616;
+}
+
+.searchSection .search-helpers ul li.create_post .icon {
+    border-color: transparent;
+}
+
+.searchSection .search-helpers ul li.create_post a i {
+    font-size: 40px;
+    color: #233B55;
+    background-color: transparent;
+}

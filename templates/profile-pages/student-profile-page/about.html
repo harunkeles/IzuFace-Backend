@@ -1,0 +1,498 @@
+{% block content %}
+
+<div id="studentUsersAbout">
+    <div class="studentUsersAboutCover">
+        <div class="section-1 images">
+            <div class="row">
+                {% for instance in one_studentUserProfile_C.studentAllImagesGallery|slice:"3:" %}
+                <div class="col">
+                    <div class="cover-img">
+                        <img id="studentUser-image-{{instance.id}}" onclick="studentUserImageModal({{instance.id}});" src="{{instance.image.url}}" alt="{{instance.imageDec}}">
+                    </div>
+                </div>
+                {% endfor %}
+                 
+            </div>
+            <div class="row">
+                <div class="more-text">
+                    <a href="" class="btn">Tüm Fotoğraflar<img src="/static/img/right.png" alt=""></a>
+                </div>
+            </div>
+             
+        </div>
+
+        <div class="section-2 about-text">
+            <div>
+                {{ one_studentUserProfile_C.bioDesc }}
+            </div>
+        </div>
+
+        <div class="section-3 social-icons">
+            <div class="row">
+                <ul class="icons">
+                    {% for instance in one_studentUserProfile_C.studentUserSocialMedia  %}
+                        {% if instance == '0' and one_studentUserProfile_C.instagram != NULL %}
+                            <li><a href="{{ one_studentUserProfile_C.instagram }}" class="icon"><i class="fab fa-instagram"></i></a></li>
+                        {% endif %}
+                        {% if instance == '1' %}
+                            <li><a href="{{ one_studentUserProfile_C.twitter }}" class="icon"><i class="fab fa-twitter"></i></a></li>
+                        {% endif %}
+                        {% if instance == '2' %}
+                            <li><a href="{{ one_studentUserProfile_C.facebook }}" class="icon"><i class="fab fa-facebook-f"></i></a></li>
+                        {% endif %}
+                        {% if instance == '3' %}
+                            <li><a href="{{ one_studentUserProfile_C.linkedin }}" class="icon"><i class="fab fa-linkedin"></i></a></li>
+                        {% endif %}
+                        {% if instance == '4' %}
+                            <li><a href="{{ one_studentUserProfile_C.Github }}" class="icon"><i class="fab fa-github"></i></a></li>
+                        {% endif %}
+                        {% if instance == '5' and one_studentUserProfile_C.whatsapp != NULL %}
+                         <li><a href="{{ one_studentUserProfile_C.whatsapp }}" class="icon"><i class="fab fa-whatsapp"></i></a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="section-4 personal-information">
+            <div class="row title">
+                <span>Kişisel Bilgilerim</span>
+            </div>
+            <div class="row body">
+                <div class="body-content">
+                        <div class="info personal-info">
+                            <div class="left-side">
+                                <div class="icon">
+                                    <img
+                                        src="https://img.icons8.com/external-photo3ideastudio-gradient-photo3ideastudio/48/000000/external-personal-information-food-delivery-photo3ideastudio-gradient-photo3ideastudio.png" />
+                                </div>
+                                <div class="sub-title">
+                                    <span>Kişi detayı </span>
+                                </div>
+                            </div>
+                            <div class="right-side">
+                                <div class="content">
+                                    <table class="table table-borderless">
+                                        <tbody>
+                                            <tr>
+                                                <th>Adı Soyadı :</th>
+                                                <td>{{ one_studentUserProfile_C.user.first_name }} {{ one_studentUserProfile_C.user.last_name }}</td>
+                                            </tr>
+                                            <tr>
+                                                {% for instance in one_studentUserProfile_C.studentUserSelfInfo %}
+                                                    {% if instance == "0" %}
+                                                        <th>Doğum Tarihi : </th>
+                                                        <td>{{ one_studentUserProfile_C.birth_day }}</td>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </tr>
+                                            <tr>
+                                                <th>Bölümü : </th>
+                                                <td>{{ one_studentUserProfile_C.departmentName }}</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Sınıfı : </th>
+                                                <td>{{ one_studentUserProfile_C.departmentClass }}. Sınıf</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info contact-info">
+                            <div class="left-side">
+                                <div class="icon">
+                                    <img src="https://img.icons8.com/48/78909C/contact-card.png" />
+                                </div>
+                                <div class="sub-title">
+                                    <span>İletişim Detayı</span>
+                                </div>
+                            </div>
+                            <div class="right-side">
+                                <div class="content">
+
+                                    <table class="table table-borderless">
+
+                                        <tbody>
+                                            <tr>
+                                                <th>E-mail : </th>
+                                                <td>{{ one_studentUserProfile_C.user.email }}</td>
+                                            </tr>
+                                            <tr>
+                                                {% for instance in one_studentUserProfile_C.studentUserSelfInfo %}
+                                                    {% if instance == "1" %}
+                                                        <th>Telefon : </th>
+                                                        <td>{{ one_studentUserProfile_C.phoneNumber }}</td>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </tr>
+                                            <tr>
+                                                {% for instance in one_studentUserProfile_C.studentUserSelfInfo %}
+                                                    {% if instance == "2" %}
+                                                        <th>Adres : </th>
+                                                        <td>{{ one_studentUserProfile_C.adress }}</td>
+                                                    {% endif %}
+                                                {% endfor %}
+                                            </tr>
+                                        </tbody>
+                                    </table>
+
+                                </div>
+                            </div>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        {% if one_studentUserProfile_C.studentExperiences %}
+            <div class="section-5 work-experience-information">
+                <div class="row title">
+                    <span>Deneyimler</span>
+                </div>
+                <div class="row body">
+                    <div class="body-content">
+                        {% for instance in one_studentUserProfile_C.studentExperiences %}
+                            {% for instance2 in instance.experienceInfo %}
+                                {% if instance2  == '0' %}
+                                    <div class="info work-experience">
+                                        <div class="left-side">
+                                            <div class="icon">
+                                                <img style="margin-top: -8px;"
+                                                    src="https://img.icons8.com/cotton/48/000000/business--v1.png" />
+                                            </div>
+                                            <div class="sub-title">
+                                                <span>{{ instance.experienceInfo }}</span>
+                                            </div>
+                                        </div>            
+                                        <div class="right-side">
+                                            <div class="content">
+                                                <div class="card">
+                                                    <div class="card-icon card-title text-muted">
+                                                        <span>{{ instance.startedDate|date:"F" }} {{ instance.startedDate|date:"Y" }} - 
+                                                            {% if instance.finishedDate %}
+                                                                {{ instance.finishedDate|date:"F" }} {{ instance.finishedDate|date:"Y" }}
+                                                            {% else %}
+                                                                Devam Ediyor
+                                                            {% endif %}
+                                                            </span>
+                                                    </div>
+                                                    <div class="card-icon card-header">
+                                                        <div class="card-text">
+                                                            {{ instance.companyName }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        {{ instance.experienceDesc }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                                {% if instance2  == '1' %}
+                                    <div class="info internship-experience">
+                                        <div class="left-side">
+                                            <div class="icon">
+                                                <img src="https://img.icons8.com/48/37474F/internship.png" />
+                                            </div>
+                                            <div class="sub-title">
+                                                <span>{{ instance.experienceInfo }}</span>
+                                            </div>
+                                        </div>
+                                        <div class="right-side">
+                                            <div class="content">
+                                                <div class="card">
+                                                    <div class="card-icon card-title text-muted">
+                                                        <span>{{ instance.startedDate|date:"F" }} {{ instance.startedDate|date:"Y" }} -
+                                                            {% if instance.finishedDate %}
+                                                                {{ instance.finishedDate|date:"F" }} {{ instance.finishedDate|date:"Y" }} &numsp;&middot;&numsp;{{instance.monthCalculate}} Ay
+                                                            {% else %}
+                                                                Devam Ediyor
+                                                            {% endif %}
+                                                        </span>
+                                                    </div>
+                                                    <div class="card-icon card-header">
+                                                        <div class="card-text">
+                                                            {{ instance.companyName }}
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-body">
+                                                        {{ instance.experienceDesc }}
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                {% endif %}
+                            {% endfor %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if one_studentUserProfile_C.studentEducations %}
+            <div class="section-6 education-information">
+                <div class="row title">
+                    <span>Eğitim Bilgilerim</span>
+                </div>
+                <div class="row body">
+                    <div class="body-content">
+                        {% for instance in one_studentUserProfile_C.studentEducations %}
+                            {% if instance %}
+                                <div class="info">
+                                    <div class="left-side">
+                                        <div class="icon">
+                                            <img style="margin-top: -8px;"
+                                                {% for icon in instance.educationInfo %}
+                                                    {% if icon == "4" %}
+                                                        src="https://img.icons8.com/color/48/000000/graduation-cap.png" 
+                                                    {% elif icon == "3" %}
+                                                        src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-university-modern-education-and-knowledge-power-flatart-icons-flat-flatarticons.png" 
+                                                    {% elif icon == "2" %}
+                                                    src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-university-modern-education-and-knowledge-power-flatart-icons-flat-flatarticons.png" 
+                                                    {% elif icon == "1" %}
+                                                    src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/48/000000/external-university-modern-education-and-knowledge-power-flatart-icons-flat-flatarticons.png" 
+                                                    {% elif icon == "0" %}
+                                                    src="https://img.icons8.com/external-konkapp-detailed-outline-konkapp/40/37474F/external-school-back-to-school-konkapp-detailed-outline-konkapp.png"
+                                                    {% endif %}
+                                                {% endfor %}
+                                            />
+                                        </div>
+                                        <div class="sub-title">
+                                            <span>{{ instance.educationInfo }}</span>
+                                        </div>
+                                    </div>
+                                    <div class="right-side">
+                                        <div class="content">
+                                            <div class="card">
+                                                <div class="card-icon card-title text-muted">
+                                                    <span>{{ instance.startedDate|date:"Y" }} - {{ instance.finishedDate|date:"Y" }} &middot; {{ instance.educationPosition }}</span>
+                                                </div>
+                                                <div class="card-icon card-header">
+                                                    <div class="card-text">
+                                                        {{ instance.educationName }}
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    {{ instance.educationDesc }}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            {% endif %}
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+
+        {% if one_studentUserProfile_C.studentForeignLang or one_studentUserProfile_C.studentProgTalent or one_studentUserProfile_C.StudentProgLangModel or one_studentUserProfile_C.studentCertificates  %}
+            <div class="section-7 talents-information">
+                <div class="row title">
+                    <span>Yetenek ve Etkinlikler</span>
+                </div>
+                <div class="row body">
+                    <div class="body-content">
+                        {% if one_studentUserProfile_C.studentForeignLang %}
+                            <div class="info foreign-language">
+                                <div class="left-side">
+                                    <div class="icon">
+                                        <img src="https://img.icons8.com/plumpy/48/000000/translation.png" />
+                                    </div>
+                                    <div class="sub-title">
+                                        <span>Yabancı Dil</span>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="content">
+                                        {% for i in one_studentUserProfile_C.studentForeignLang %}
+                                            <div class="row">
+                                                <div class="title">
+                                                    <img src="/static/img/right.png" alt="right"> {{ i.langName }}
+                                                </div>
+                                                <div class="body">
+                                                    <div class="degree">
+                                                        {% for k in i.foreignRank|center:i.foreignRank %}
+                                                            <i class="far fa-circle"></i>
+                                                        {% endfor %}
+                                                        {% for k in i.foreignRank|center:i.rankCount %}
+                                                            {% if i.rankCount == 0 %}
+                                                            {% else %}
+                                                                <i class="far fa-circle empty"></i>
+                                                            {% endif %}
+                                                        {% endfor %}
+                                                        <div class="text">
+                                                            Upper-Intermediate
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if one_studentUserProfile_C.studentProgLang %}
+                            <div class="info programing-language">
+                                <div class="left-side">
+                                    <div class="icon">
+                                        <img src="https://img.icons8.com/material-two-tone/50/000000/programming.png" />
+                                    </div>
+                                    <div class="sub-title">
+                                        <span>Programlama Dilleri</span>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="content">
+                                        {% for instance in one_studentUserProfile_C.studentProgLang %}
+                                            <div class="card">
+                                                <div class="card-icon card-header">
+                                                    <div class="card-text">
+                                                        {{ instance.progLangName }}
+                                                    </div>
+                                                </div>
+                                                <div class="card-icon card-title">
+                                                    <div>
+                                                        <div class="progress-bar-container">
+                                                            <div class="progress-bar stripes">
+                                                                <span class="progress-bar-inner" style="width:{{instance.progLangRankInfo.0}}0%;"></span>
+                                                            </div>
+                                                            <div class="div-point" style="padding-left: calc({{instance.progLangRankInfo.0}}0%/1.59);">
+                                                                <i class="fas fa-angle-up"></i>
+                                                                <span>{{instance.progLangRankInfo.0}}0%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    {{instance.progLangDesc}}
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if one_studentUserProfile_C.studentProgTalent %}
+                            <div class="info programs">
+                                <div class="left-side">
+                                    <div class="icon">
+                                        <img src="https://img.icons8.com/plumpy/50/000000/program.png" />
+                                    </div>
+                                    <div class="sub-title">
+                                        <span>Programlar</span>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="content">
+                                        {% for instance in one_studentUserProfile_C.studentProgTalent %}
+                                            <div class="card">
+                                                <div class="card-icon card-header">
+                                                    <div class="card-text">
+                                                        {{ instance.progTalentName }}
+                                                    </div>
+                                                </div>
+                                                <div class="card-icon card-title">
+                                                    <div>
+                                                        <div class="progress-bar-container">
+                                                            <div class="progress-bar stripes">
+                                                                <span class="progress-bar-inner" style="width:{{instance.progTalentRankInfo.0}}0%;"></span>
+                                                            </div>
+                                                            <div class="div-point" style="padding-left: calc({{instance.progTalentRankInfo.0}}0%/1.59);">
+                                                                <i class="fas fa-angle-up"></i>
+                                                                <span>{{instance.progTalentRankInfo.0}}0%</span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="card-body">
+                                                    {{instance.progTalentDesc}}
+                                                </div>
+                                            </div>
+                                        {% endfor %}
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                        {% if one_studentUserProfile_C.studentCertificates %}
+                            <div class="info certificate">
+                                <div class="left-side">
+                                    <div class="icon">
+                                        <img src="https://img.icons8.com/ios/50/000000/certificate.png" />
+                                    </div>
+                                    <div class="sub-title">
+                                        <span>Sertifikalar</span>
+                                    </div>
+                                </div>
+                                <div class="right-side">
+                                    <div class="content">
+                                        <!-- Swiper -->
+                                        <div class="swiper mySwiper std-aboutTab-certificates">
+                                            <div class="swiper-wrapper">
+                                                {% for instance in one_studentUserProfile_C.studentCertificates %}
+                                                    <div class="swiper-slide">
+                                                        <div class="cover">
+                                                            <img id="cer-image-{{instance.id}}" onclick="cerImageModal({{instance.id}});" class="one-certificate" src="{{instance.image.url}}" alt="{{instance.imageDec}}">
+                                                        </div>
+                                                    </div>
+                                                {% endfor %}
+                                            </div>
+                                            <div class="swiper-button-next"></div>
+                                            <div class="swiper-button-prev"></div>
+                                            <div class="swiper-pagination"></div>
+                                        </div>
+
+                                        <!-- The Modal -->
+                                        <div id="cer-img-modal" class="modal">
+                                            <span id="cer-img-modal-close" style=" font-size: 80px;" class="close">&times;</span>
+                                            <img class="modal-content" style="max-height: 90%;" id="modal-image">
+                                            <div id="modal-caption" style="color: rgb(236, 236, 236); text-align: center; font-family: 'Roboto Slab', serif; font-size: 22px; font-weight: 400; margin-top: 50px;" ></div>
+                                        </div>
+                                        <!-- The User Image Modal -->
+                                        <div id="studentUser-img-modal" class="modal">
+                                            <span id="studentUser-img-modal-close" style=" font-size: 80px;" class="close">&times;</span>
+                                            <img class="modal-content" style="max-height: 90%;" id="studentUser-modal-image">
+                                            <div id="studentUser-modal-caption" style="color: rgb(236, 236, 236); text-align: center; font-family: 'Roboto Slab', serif; font-size: 22px; font-weight: 400; margin-top: 50px;"></div>
+                                        </div>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+        {% if one_studentUserProfile_C.studentInterested %}
+            <div class="section-9 hobbies-information">
+                <div class="row title">
+                    <span>İlgi Alanları</span>
+                </div>
+                <div class="row body">
+                    <div class="body-content">
+                        <div class="info foreign-language">
+
+                            <div class="right-side">
+                                <div class="content">
+                                    {% for instance in one_studentUserProfile_C.studentInterested %}
+                                        <div class="hobbie">
+                                            <div class="hobbie-name">
+                                                {{ instance.interestName }}
+                                            </div>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {% endif %}
+    </div>
+</div>
+
+
+{% endblock %}

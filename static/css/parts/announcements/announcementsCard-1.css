@@ -1,0 +1,186 @@
+#announcementsCard-1 {
+    margin-bottom: 50px;
+    background-color: transparent;
+    padding: 0 10px;
+}
+
+
+#announcementsCard-1 .announcementsCard-1__cover .announcements-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    background: linear-gradient(90deg, transparent 50%, #FFC107);
+    height: 50px;
+}
+
+#announcementsCard-1 .announcementsCard-1__cover .announcements-title .title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    border-left: 6px solid #FFC107;
+    padding: 5px 20px;
+    padding-top: 0;
+    padding-right: 30px;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    height: 50px;
+
+}
+
+#announcementsCard-1 .announcementsCard-1__cover .announcements-title .title img {
+    margin-right: 15px;
+}
+
+#announcementsCard-1 .announcementsCard-1__cover .announcements-title .title span {
+    color: #FFC107;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+#announcementsCard-1 .announcementsCard-1__cover .announcements-title .more {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #2D3138;
+    padding: 6px 10px;
+    border-radius: 7px;
+    margin-right: 5px;
+}
+
+#announcementsCard-1 .announcementsCard-1__cover .announcements-title .more span {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    /* color: #51586d; */
+    color: white;
+    margin-right: 10px;
+}
+
+#announcementsCard-1 .announcementsCard-1__cover .announcements-title .more i {
+    color: white;
+}
+
+#announcementsCard-1 .blockquote-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#announcementsCard-1 .blockquote-list .blockquote-card {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    width: min-content;
+    margin-bottom: 20px;
+    width: 49%;
+    padding: 10px 10px;
+    padding-top: 0;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    background-color: white;
+    border: 1px solid #FFC107;
+}
+
+#announcementsCard-1 .blockquote-list .blockquote-card:nth-child(2n+1) {
+    margin-right: 10px;
+}
+
+#announcementsCard-1 .blockquote-list .blockquote-card:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+#announcementsCard-1 .blockquote-list .blockquote-card .card-content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+    padding: 10px 5px;
+
+}
+
+#announcementsCard-1 .blockquote-list .blockquote-card .card-content .date {
+    width: 80px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px; */
+    border-right: 1px solid #8B2232;
+
+}
+
+#announcementsCard-1 .blockquote-list .blockquote-card .card-content .date .day {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    color: #8B2232;
+    margin-top: -5px;
+}
+
+#announcementsCard-1 .blockquote-list .blockquote-card .card-content .date .month {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 400;
+    font-size: 17px;
+    color: #8B2232;
+    margin-top: -10px;
+
+}
+
+#announcementsCard-1 .blockquote-list .blockquote-card .card-content .content {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    align-items: center;
+
+}
+
+#announcementsCard-1 .blockquote-list .blockquote-card .card-content .content .text {
+    margin: 40px 5px;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    color: #71778a;
+    margin-left: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+}
+
+#announcementsCard-1 .blockquote-list .blockquote-card .card-owner {
+    text-align: right;
+    border-top: 1px solid #8B2232;
+    padding-top: 10px;
+    width: 100%;
+}
+
+#announcementsCard-1 .blockquote-list .blockquote-card .card-owner img {
+    width: 30px;
+    height: 30px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    object-fit: cover;
+
+}
+
+#announcementsCard-1 .blockquote-list .blockquote-card .card-owner span {
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #71778a;
+    margin-left: 10px;
+}

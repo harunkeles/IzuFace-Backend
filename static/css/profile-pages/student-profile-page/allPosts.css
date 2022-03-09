@@ -1,0 +1,220 @@
+#studentUsersAllPosts {}
+
+
+#studentUsersAllPosts .design-buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    margin-bottom: 30px;
+}
+
+#studentUsersAllPosts .design-buttons .design-button-position {
+    /* background-color: antiquewhite; */
+}
+
+#studentUsersAllPosts .design-buttons .design-button-position i {
+    transform: rotateY(180deg);
+    font-size: 17px;
+}
+
+#studentUsersAllPosts .design-buttons .sUAPC {
+    text-align: right;
+}
+
+#studentUsersAllPosts .design-buttons .sUAPC span {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 600;
+}
+
+
+
+/* * LIST SYLE */
+#studentUsersAllPostsItems.list-group-item {
+    /* background-color: rebeccapurple; */
+    border: none;
+    background-color: transparent;
+}
+
+#studentUsersAllPostsItems.list-group-item .item {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 20px;
+    transition: all 0.5s;
+    padding: 10px 0;
+    border-radius: 10px;
+}
+
+#studentUsersAllPostsItems.list-group-item .item:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+}
+
+#studentUsersAllPostsItems.list-group-item .item .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    /* background-color: aliceblue; */
+}
+
+/* left-side */
+#studentUsersAllPostsItems.list-group-item .item .row .left-side {
+    /* background-color: bisque; */
+}
+
+#studentUsersAllPostsItems.list-group-item .item .row .left-side h5 {
+    font-family: 'Roboto Slab', serif;
+    color: #5B616C;
+    font-weight: 700;
+}
+
+#studentUsersAllPostsItems.list-group-item .item .row .left-side p.text-small-content {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+}
+
+#studentUsersAllPostsItems.list-group-item .item .row .left-side .education {
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+#studentUsersAllPostsItems.list-group-item .item .row .left-side .education img {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    /* background-color: #5B616C; */
+}
+
+#studentUsersAllPostsItems.list-group-item .item .row .left-side .education a.btn {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    text-transform: capitalize;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+}
+
+#studentUsersAllPostsItems.list-group-item .item .row .left-side .time {}
+
+#studentUsersAllPostsItems.list-group-item .item .row .left-side .time span {
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+}
+
+
+/* right-side */
+#studentUsersAllPostsItems.list-group-item .item .row .right-side {
+    max-width: 200px;
+    height: 134px;
+    padding: 0;
+    margin-left: 15px;
+}
+
+#studentUsersAllPostsItems.list-group-item .item .row .right-side img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+
+}
+
+/* * GRİD SYLE */
+#studentUsersAllPostsItems.grid-group-item {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    row-gap: 15px;
+
+}
+
+#studentUsersAllPostsItems.grid-group-item .item {
+    padding: 10px 5px;
+    transition: ease 0.5s;
+
+}
+
+#studentUsersAllPostsItems.grid-group-item .item:hover {
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+}
+
+#studentUsersAllPostsItems.grid-group-item .item .row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* left side */
+
+
+#studentUsersAllPostsItems.grid-group-item .item .row .left-side h5 {
+    font-family: 'Roboto Slab', serif;
+    color: #5B616C;
+    font-weight: 700;
+}
+
+#studentUsersAllPostsItems.grid-group-item .item .row .left-side p.text-small-content {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+}
+
+#studentUsersAllPostsItems.grid-group-item .item .row .left-side .row {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+#studentUsersAllPostsItems.grid-group-item .item .row .left-side .education {
+    /* background-color: aqua; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+
+}
+
+#studentUsersAllPostsItems.grid-group-item .item .row .left-side .education img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+#studentUsersAllPostsItems.grid-group-item .item .row .left-side .education a.btn {
+    font-family: 'PT Sans', sans-serif;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.7px;
+    text-transform: capitalize;
+    box-shadow: none;
+
+}
+
+#studentUsersAllPostsItems.grid-group-item .item .row .left-side .time span {
+    font-family: 'Roboto Slab', serif;
+    font-size: 14px;
+}
+
+/* Right Side */
+
+
+#studentUsersAllPostsItems.grid-group-item .item .row .right-side {
+    max-width: 270px;
+    height: 150px;
+    padding: 0;
+    margin-bottom: 20px;
+}
+
+#studentUsersAllPostsItems.grid-group-item .item .row .right-side img {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}

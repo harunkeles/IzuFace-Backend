@@ -1,0 +1,60 @@
+{% block content %}
+
+<div class="searchSection">
+    <div class="search-helpers">
+        <ul>
+            <li class="create_post">
+                <a href="">
+                    <div class="icon">
+                        <i class="fas fa-plus-square"></i>
+                    </div>
+                    <span>Post Oluştur</span>
+                </a>
+            </li>
+            <li class="news">
+                <a href="{% url 'all_news' %}">
+                    <div class="icon">
+                        <i class="far fa-newspaper"></i>
+                    </div>
+                    <span>Haber Oluştur</span>
+                </a>
+            </li>
+            <li class="activities">
+                <a href="">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/cotton/64/000000/events--v2.png"/>
+                    </div>
+                    <span>Etkinlik Oluştur</span>
+                </a>
+            </li>
+            <li class="suggestions">
+                <a href="">
+                    <div class="icon">
+                        <img
+                            src="https://img.icons8.com/external-victoruler-flat-victoruler/60/000000/external-suggestion-business-and-finance-victoruler-flat-victoruler.png" />
+                    </div>
+                    <span>Öneri Yap</span>
+                </a>
+            </li>
+            <li class="ask_question">
+                <a href="">
+                    <div class="icon">
+                        <i class="fas fa-question"></i>
+                    </div>
+                    <span>Soru sor</span>
+                </a>
+            </li>
+            <li class="complaint">
+                <a href="">
+                    <div class="icon">
+                        <img src="https://img.icons8.com/color/44/000000/complaint.png" />
+                    </div>
+                    <span>Şikayet Et</span>
+                </a>
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+{% endblock %}

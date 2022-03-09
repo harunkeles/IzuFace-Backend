@@ -1,0 +1,244 @@
+#mainMenu {
+    position: fixed;
+    z-index: 10;
+    font-family: "Rozha One", serif;
+}
+
+
+@-webkit-keyframes updown {
+
+    0%,
+    50%,
+    100% {
+        transform: translatey(0);
+    }
+
+    20% {
+        transform: translatey(5px);
+    }
+
+    25% {
+        transform: translatey(-20px);
+    }
+
+    30% {
+        transform: translatey(20px);
+    }
+
+    35% {
+        transform: translatey(-5px);
+    }
+}
+
+@keyframes updown {
+
+    0%,
+    50%,
+    100% {
+        transform: translatey(0);
+    }
+
+    20% {
+        transform: translatey(5px);
+    }
+
+    25% {
+        transform: translatey(-20px);
+    }
+
+    30% {
+        transform: translatey(20px);
+    }
+
+    35% {
+        transform: translatey(-5px);
+    }
+}
+
+
+#mainMenu .hamburger {
+    position: absolute;
+    left: 30px;
+    top: 30px;
+    display: flex;
+    height: 25px;
+    width: 32px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+#mainMenu .hamburger__icon {
+    display: inline-block;
+    height: 5px;
+    width: 32px;
+    background: #8B2232;
+    border-radius: 2px;
+    transition: 1.4s ease-in-out;
+}
+
+#mainMenu .sidebar {
+    height: 100vh;
+    width: 320px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    transform: translatex(-100%);
+    transition: transform 0.4s ease-in-out;
+}
+
+#mainMenu .sidebar__close {
+    position: absolute;
+    top: 50%;
+    right: -30px;
+    background: #fff;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 20px rgba(0, 0, 0, 0.03);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translatex(-100%);
+    cursor: pointer;
+    transition: transform 0.4s ease-in-out 0.2s;
+    box-shadow: rgba(255, 255, 255, 0.17) 0px -23px 25px 0px inset, rgba(255, 255, 255, 0.15) 0px -36px 30px 0px inset, rgba(255, 255, 255, 0.1) 0px -79px 40px 0px inset, rgba(0, 0, 0, 0.06) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(255, 255, 255, 0.09) 0px 16px 8px, rgba(255, 255, 255, 0.09) 0px 32px 16px;
+}
+
+#mainMenu .sidebar__close::before,
+#mainMenu .sidebar__close::after {
+    content: "";
+    height: 2px;
+    background: #8B2232;
+    width: 24px;
+    display: block;
+    position: absolute;
+}
+
+#mainMenu .sidebar__close::after {
+    transform: rotate(90deg);
+}
+
+
+/* izu-face-logo */
+#mainMenu .sidebar .nav-izu-face-logo {
+    /* background-color: #898989; */
+    text-align: center;
+    width: 100%;
+    padding-top: 30px;
+    padding-bottom: 20px;
+    box-shadow: rgba(27, 31, 35, 0.13) 5px 5px 15px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+
+}
+
+#mainMenu ul.sidebar__menu {
+    margin: 0;
+    padding: 0;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 5px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    color: #898989;
+    list-style: none;
+
+}
+
+
+#mainMenu ul.sidebar__menu li {
+    margin: 1px 0;
+    /* background-color: #898989; */
+}
+
+#mainMenu ul.sidebar__menu li:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+#mainMenu ul.sidebar__menu li a img {
+    margin: 0 10px;
+    width: 30px;
+    height: 30px;
+}
+#mainMenu ul.sidebar__menu li.izu-campus-info a img {
+    width: 26px;
+    height: 26px;
+}
+
+#mainMenu ul.sidebar__menu li a span {
+    font-size: 15px;
+    margin-left: 10px;
+
+}
+
+#mainMenu ul.sidebar__menu li a {
+    display: flex;
+    padding: 10px 0;
+    font-family: 'Roboto Mono', monospace;
+    color: #898989;
+    /* background-color: #8B2232; */
+    width: 100%;
+    text-decoration: none;
+}
+
+
+#mainMenu .sidebar ul.sidebar__bottom-menu {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+
+}
+
+#mainMenu .sidebar ul.sidebar__bottom-menu li {
+    margin: 5px 0;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+#mainMenu .menu-control {
+    display: none;
+}
+
+
+#mainMenu .bg {
+    display: none;
+}
+
+#mainMenu .menu-control:checked~.hamburger {
+    background-color: black;
+    display: none;
+}
+
+#mainMenu .menu-control:checked~.bg {
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    /* background: linear-gradient(90deg,#233B55,transparent); */
+    background: linear-gradient(90deg,#505050,#505050);
+    opacity: 0.5;
+}
+
+#mainMenu .menu-control:checked~.sidebar {
+    transform: translatex(0);
+}
+
+#mainMenu .menu-control:checked~.sidebar .sidebar__close {
+    transform: translatex(0) rotate(45deg);
+}
+
+#mainMenu .menu-control:checked~.sidebar .sidebar__menu a {
+    transform: translatex(0);
+}

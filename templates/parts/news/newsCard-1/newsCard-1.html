@@ -1,0 +1,44 @@
+{% block content %}
+
+<div id="news-card-1">
+    <div class="news-title">
+        <div class="title">
+            <img src="https://img.icons8.com/ios/30/7C68EE/news.png" />
+            <span>Haberler</span>
+        </div>
+        <a href="" class="more">
+            <span>Daha fazla haber</span>
+            <i class="fas fa-angle-double-right"></i>
+        </a>
+    </div>
+    <div class="swiper mySwiper m-p-news">
+        <div class="swiper-wrapper">
+            {% for instance in newsPosts_C %}
+            <div class="swiper-slide">
+                <a href="">
+                    <img src="{{instance.image.url}}" alt="" srcset="">
+                    <div class="bg-blur"></div>
+                    <div class="slide-content">
+                        <div class="category">
+                            {{instance.subCategory}}
+                        </div>
+                        <div class="title">
+                            {{instance.title}}
+                        </div>
+                    </div>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-button-prev">
+            <img class="left-arrow"
+                src="https://img.icons8.com/external-those-icons-fill-those-icons/15/ffffff/external-left-arrows-those-icons-fill-those-icons-5.png" />
+        </div>
+        <div class="swiper-button-next">
+            <img class="right-arrow"
+                src="https://img.icons8.com/external-those-icons-fill-those-icons/15/ffffff/external-left-arrows-those-icons-fill-those-icons-5.png" />
+        </div>
+        <div class="swiper-pagination"></div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,153 @@
+#activitiesCard-1 .activitiesCard-1__cover .activities-title {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    height: 50px;
+    background: linear-gradient(90deg, transparent, transparent, #4CB884);
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activities-title .title {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: row;
+    border-left: 6px solid #4CB884;
+    padding: 0px 20px;
+    padding-top: 0;
+    padding-right: 30px;
+    border-top-right-radius: 17px;
+    border-bottom-right-radius: 17px;
+    height: 50px;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activities-title .title img {
+    margin-right: 15px;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activities-title .title span {
+    color: #4CB884;
+    font-family: 'Roboto Slab', serif;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 25px;
+    font-weight: 600;
+    padding: 0;
+    margin: 0;
+    line-height: 40px;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activities-title .more {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    background-color: #2D3138;
+    padding: 6px 10px;
+    border-radius: 7px;
+    margin-right: 5px;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activities-title .more span {
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    color: white;
+    margin-right: 10px;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activities-title .more i {
+    color: white;
+}
+
+
+#activitiesCard-1 .activitiesCard-1__cover .activities-list {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row !important;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activite {
+    padding: 0 6px;
+    padding-bottom: 10px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 250px;
+    border: 1px solid #4cb88449;
+    padding-top: 5px;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activite .card-img {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activite .card-img img {
+    width: 200px !important;
+    height: 300px;
+    object-fit: cover;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 5px;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activite .card-title a {
+    color: #3a4f7e;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 800;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activite .card-title a:hover {
+    color: #E5433F;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activite .card-desc {
+    font-family: 'Rubik', sans-serif;
+    text-align: left;
+    font-size: 15px;
+    color: #3a4f7e;
+
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activite .activite-owner {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    flex-direction: row;
+    width: 100%;
+    margin-top: 15px;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activite .activite-owner .owner-img {
+    margin-right: 10px;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activite .activite-owner img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    object-fit: cover;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activite .activite-owner .info {
+    width: 170px;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activite .activite-owner .info .owner-name {
+    font-family: 'Rubik', sans-serif;
+    font-size: 13px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    color: #999ba0;
+}
+
+#activitiesCard-1 .activitiesCard-1__cover .activite .activite-owner .info .small-info {
+    font-family: 'Rubik', sans-serif;
+    font-size: 12px;
+    color: #999ba0;
+}

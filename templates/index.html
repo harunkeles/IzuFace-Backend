@@ -1,0 +1,113 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap 5 -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.css" rel="stylesheet" />
+    <!-- SwipperJS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <!-- Animate -->
+    <link
+    rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+
+
+    <!--! STYLE DOSYALARI -->
+
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/main.css' %}">
+    <!-- Parts -->
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/parts/leftSide/leftSideMenu.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/parts/rightSide/rightSideContents.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/parts/announcements/announcementsCard-1.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/parts/posts/lastPostsCard-1.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/parts/search/searchCard-1.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/parts/activities/activitiesCard-1.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/parts/news/newsCard-1.css' %}">
+    <!-- Main Page -->
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/main-page/mainPage.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/main-page/weather.css' %}">
+    <!-- Profile Page -->
+    <link rel='stylesheet' type='text/css' media='screen'
+        href="{% static 'css/profile-pages/student-profile-page/studentUsersProfile.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen'
+        href="{% static 'css/profile-pages/student-profile-page/about.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen'
+        href="{% static 'css/profile-pages/student-profile-page/allPosts.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen'
+        href="{% static 'css/profile-pages/student-profile-page/allFollows.css' %}">
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/main-menu/mainMenu.css' %}">
+    <!-- News Page -->
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/news-page/newsPage.css' %}">
+     <!-- Post Page -->
+    <link rel='stylesheet' type='text/css' media='screen' href="{% static 'css/all-posts/all-posts.css' %}">
+
+    <!-- ! -->
+
+    <title>İzu Face</title>
+</head>
+
+<body>
+
+
+    {% block content %}
+
+
+
+
+    {% endblock %}
+
+
+
+
+
+
+
+    <!-- JavaScript -->
+    <!--  -->
+
+    <!-- Bootstrap 5 -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
+    <!-- Jquery -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.6.0/mdb.min.js"></script>
+    <!-- SwipperJS -->
+    <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+    <!-- Ajax -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- JS Dosyaları -->
+    <script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/main-page/main-page.js' %}"></script>
+    <script src="{% static 'js/all-posts/all-posts.js' %}"></script>
+    <script src="{% static 'js/student-profile-page/studentUsersProfile.js' %}"></script>
+    <script src="{% static 'js/student-profile-page/allPosts.js' %}"></script>
+    <script src="{% static 'js/student-profile-page/allFollows.js' %}"></script>
+    <script src="{% static 'js/student-profile-page/about.js' %}"></script>
+
+
+</body>
+
+</html>

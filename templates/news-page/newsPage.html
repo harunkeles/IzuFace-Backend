@@ -1,0 +1,16 @@
+{% extends 'index.html' %}
+{% block content %}
+
+<div id="newsPage">
+    <div class="newsPage__cover">
+        {% include 'parts/leftSide/leftSideMenu.html' %}
+        <div class="newsPage__middle__side__contents">
+            <div class="middle__side__cover">
+                {% include 'parts/search/searchCard-1/searchCard-1.html' %}
+            </div>
+        </div>
+        {% include 'parts/rightSide/rightSideContents.html' %}
+    </div>
+</div>
+
+{% endblock %}

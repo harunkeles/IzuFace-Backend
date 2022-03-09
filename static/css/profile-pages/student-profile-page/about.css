@@ -1,0 +1,1158 @@
+/** Section-1...Images */
+
+#studentUsersAbout .section-1.images .row .col {
+    width: 250px;
+}
+
+#studentUsersAbout .section-1.images .row .col .cover-img {
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    border-radius: 10px;
+    width: 230px;
+}
+
+#studentUsersAbout .section-1.images .row .col .cover-img:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+#studentUsersAbout .section-1.images .row .col img {
+    width: 230px;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#studentUsersAbout .section-1.images .row .col img:hover {
+    cursor: pointer;
+}
+
+#studentUsersAbout .section-1.images .row:nth-child(2) {
+    z-index: 2;
+}
+
+#studentUsersAbout .section-1.images .row .more-text {
+    margin-top: 30px;
+    text-align: right;
+}
+
+#studentUsersAbout .section-1.images .row .more-text img {
+    width: 20px;
+    margin-left: 10px;
+
+}
+
+#studentUsersAbout .section-1.images .row .more-text a {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+    text-transform: capitalize;
+}
+
+#studentUsersAbout .section-1.images .row .more-text a:hover {
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+
+}
+
+/** Section-2...About-Text */
+
+#studentUsersAbout .section-2.about-text {
+    margin-top: 50px;
+    padding: 0 25px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+}
+
+/** Section-3...Social-Icons */
+
+
+#studentUsersAbout .section-3.social-icons {
+    margin-top: 30px;
+}
+
+
+#studentUsersAbout .section-3.social-icons .row .icons {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#studentUsersAbout .section-3.social-icons .row .icons li {
+    margin-right: 30px;
+}
+
+#studentUsersAbout .section-3.social-icons .row .icons li .icon {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    color: #f1f1f1;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #8B2232;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+#studentUsersAbout .section-3.social-icons .row .icons li .icon i {
+    font-size: 28px;
+}
+
+#studentUsersAbout .section-3.social-icons .row .icons li .icon:after {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    content: '';
+    box-sizing: content-box;
+}
+
+
+#studentUsersAbout .section-3.social-icons .row .icons li .icon:after {
+    padding: 7px;
+    box-shadow: 0 0 0 4px #8B2232;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    -ms-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    transition: all 0.5s;
+    -webkit-transform: scale(0.8);
+    -moz-transform: scale(0.8);
+    -ms-transform: scale(0.8);
+    -o-transform: scale(0.8);
+    transform: scale(0.8);
+    opacity: 0;
+}
+
+#studentUsersAbout .section-3.social-icons .row .icons .icon:hover {
+    background-color: #F4F3F7;
+    color: #8B2232;
+}
+
+#studentUsersAbout .section-3.social-icons .row .icons .icon:hover:after {
+    -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    -o-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+}
+
+/** Section-4...Personal-Information */
+
+#studentUsersAbout .section-4.personal-information {
+    margin-top: 30px;
+    border-bottom: 3px solid #EBEAEF;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #dedde0;
+}
+
+/* 
+#studentUsersAbout .section-4.personal-information::after {
+    content: '';
+    position: absolute;
+    background-color: #FAFAFA;
+    left: 50%;
+    margin-top: -5px;
+    transform: translateX(-50%);
+    width: 775px;
+    border-bottom: 3px solid #dedde0;
+    height: 70px;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px;
+} */
+
+#studentUsersAbout .section-4.personal-information .row.title {
+    margin-bottom: 40px;
+}
+
+#studentUsersAbout .section-4.personal-information .row.title span {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    width: auto;
+}
+
+
+#studentUsersAbout .section-4.personal-information .row.body .body-content {
+    padding: 0;
+}
+
+#studentUsersAbout .section-4.personal-information .row.body .body-content .info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+#studentUsersAbout .section-4.personal-information .row.body .body-content .info .left-side {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    min-width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#studentUsersAbout .section-4.personal-information .row.body .body-content .info .left-side .icon {
+    margin: 0 20px;
+}
+
+#studentUsersAbout .section-4.personal-information .row.body .body-content .info .left-side .icon img {
+    font-size: 35px;
+    color: #8B2232;
+}
+
+#studentUsersAbout .section-4.personal-information .row.body .body-content .info .left-side .sub-title {
+    width: auto;
+}
+
+#studentUsersAbout .section-4.personal-information .row.body .body-content .info .left-side .sub-title span {
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+#studentUsersAbout .section-4.personal-information .row.body .body-content .info .right-side {
+    margin-left: 50px;
+}
+
+
+
+
+#studentUsersAbout .section-4.personal-information .row.body .body-content .info .right-side .content .table {
+    margin: 4px;
+}
+
+
+#studentUsersAbout .section-4.personal-information .row.body .body-content .info .right-side .content .table tbody tr {
+    margin-bottom: 5px;
+}
+
+#studentUsersAbout .section-4.personal-information .row.body .body-content .info .right-side .content .table tbody tr th {
+    width: 150px;
+    padding: 10px 10px;
+    padding-top: 13.5px;
+    color: black;
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: 15px;
+
+
+}
+
+#studentUsersAbout .section-4.personal-information .row.body .body-content .info .right-side .content .table tbody tr td {
+    padding-left: 0;
+    padding-top: 11px;
+    padding-bottom: 10px;
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: #5B616C;
+    word-wrap: break-word;
+    letter-spacing: 1px;
+}
+
+
+
+/**  Section-5...Experience-Information */
+
+#studentUsersAbout .section-5.work-experience-information {
+    margin-top: 60px;
+    border-bottom: 1px solid #dedde0;
+}
+
+/* 
+#studentUsersAbout .section-5.work-experience-information::after {
+    content: '';
+    position: absolute;
+    background-color: #FAFAFA;
+    left: 50%;
+    margin-top: -5px;
+    transform: translateX(-50%);
+    width: 775px;
+    border-bottom: 3px solid #dedde0;
+    height: 70px;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px;
+} */
+
+
+#studentUsersAbout .section-5.work-experience-information .row.title {
+    margin-bottom: 40px;
+}
+
+#studentUsersAbout .section-5.work-experience-information .row.title span {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    width: auto;
+}
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content {
+    padding: 0;
+}
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content .info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content .info .left-side {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    min-width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content .info .left-side .icon {
+    margin: 0 20px;
+}
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content .info .left-side .icon img {
+    font-size: 35px;
+    color: #8B2232;
+}
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content .info .left-side .sub-title {
+    width: auto;
+}
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content .info .left-side .sub-title span {
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content .info .right-side {
+    margin-left: 50px;
+}
+
+
+
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content .info .right-side .content .card {
+    border: none;
+    box-shadow: none;
+    margin-top: 15px;
+    padding-left: 12px;
+    background-color: transparent;
+}
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content .info .right-side .content .card .card-icon::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 25px;
+    margin-top: 3px;
+    background-color: #8B2232;
+}
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content .info .right-side .content .card .card-title {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content .info .right-side .content .card .card-title span {
+    margin-left: 20px;
+}
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content .info .right-side .content .card .card-header {
+    padding: 0;
+    border: none;
+}
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content .info .right-side .content .card .card-header .card-text {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    color: #5B616C;
+    font-size: 20px;
+    margin-left: 20px;
+
+}
+
+#studentUsersAbout .section-5.work-experience-information .row.body .body-content .info .right-side .content .card .card-body {
+    padding: 15px 0px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+}
+
+
+
+/** Section-6...Education-Information */
+
+#studentUsersAbout .section-6.education-information {
+    margin-top: 60px;
+    border-bottom: 1px solid #dedde0;
+}
+
+/* 
+#studentUsersAbout .section-6.education-information::after {
+    content: '';
+    position: absolute;
+    background-color: #FAFAFA;
+    left: 50%;
+    margin-top: -5px;
+    transform: translateX(-50%);
+    width: 775px;
+    border-bottom: 3px solid #dedde0;
+    height: 70px;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px;
+} */
+
+#studentUsersAbout .section-6.education-information .row.title {
+    margin-bottom: 40px;
+}
+
+#studentUsersAbout .section-6.education-information .row.title span {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    width: auto;
+}
+
+
+#studentUsersAbout .section-6.education-information .row.body .body-content {
+    padding: 0;
+}
+
+#studentUsersAbout .section-6.education-information .row.body .body-content .info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+#studentUsersAbout .section-6.education-information .row.body .body-content .info .left-side {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    min-width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#studentUsersAbout .section-6.education-information .row.body .body-content .info .left-side .icon {
+    margin: 0 20px;
+}
+
+#studentUsersAbout .section-6.education-information .row.body .body-content .info .left-side .icon img {
+    font-size: 35px;
+    color: #8B2232;
+}
+
+#studentUsersAbout .section-6.education-information .row.body .body-content .info .left-side .sub-title {
+    width: auto;
+}
+
+#studentUsersAbout .section-6.education-information .row.body .body-content .info .left-side .sub-title span {
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+#studentUsersAbout .section-6.education-information .row.body .body-content .info .right-side {
+    margin-left: 50px;
+}
+
+
+
+
+#studentUsersAbout .section-6.education-information .row.body .body-content .info .right-side .content .card {
+    border: none;
+    box-shadow: none;
+    margin-top: 15px;
+    padding-left: 12px;
+    background-color: transparent;
+}
+
+#studentUsersAbout .section-6.education-information .row.body .body-content .info .right-side .content .card .card-icon::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 25px;
+    margin-top: 3px;
+    background-color: #8B2232;
+}
+
+#studentUsersAbout .section-6.education-information .row.body .body-content .info .right-side .content .card .card-title {
+    font-family: 'Comfortaa', cursive;
+    font-weight: 600;
+    font-size: 13px;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 2px;
+}
+
+#studentUsersAbout .section-6.education-information .row.body .body-content .info .right-side .content .card .card-title span {
+    margin-left: 20px;
+}
+
+#studentUsersAbout .section-6.education-information .row.body .body-content .info .right-side .content .card .card-header {
+    padding: 0;
+    border: none;
+}
+
+#studentUsersAbout .section-6.education-information .row.body .body-content .info .right-side .content .card .card-header .card-text {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    color: #5B616C;
+    font-size: 20px;
+    margin-left: 20px;
+
+}
+
+#studentUsersAbout .section-6.education-information .row.body .body-content .info .right-side .content .card .card-body {
+    padding: 15px 0px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+}
+
+
+/** Section-7...Talents-Information */
+
+
+#studentUsersAbout .section-7.talents-information {
+    margin-top: 60px;
+    border-bottom: 1px solid #dedde0;
+}
+
+/* 
+#studentUsersAbout .section-7.talents-information::after {
+    content: '';
+    position: absolute;
+    background-color: #FAFAFA;
+    left: 50%;
+    margin-top: -5px;
+    transform: translateX(-50%);
+    width: 775px;
+    border-bottom: 3px solid #dedde0;
+    height: 70px;
+    border-radius: 100%;
+    box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px;
+} */
+
+
+#studentUsersAbout .section-7.talents-information .row.title {
+    margin-bottom: 40px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.title span {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    width: auto;
+}
+
+
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content {
+    padding: 0;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .left-side {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    width: 250px;
+    max-width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .left-side .icon {
+    margin: 0 20px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .left-side .icon img {
+    font-size: 35px;
+    color: #8B2232;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .left-side .sub-title {
+    width: auto;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .left-side .sub-title span {
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side {
+    margin-left: 50px;
+    width: 100%;
+}
+
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content {
+    margin-top: 20px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .row {
+    margin-bottom: 40px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .row .title {
+    margin: 0;
+    padding: 0;
+    margin-bottom: 15px;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    color: #5B616C;
+    font-size: 17px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .row .title img {
+    width: 20px;
+    margin-right: 10px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .row .body {
+    margin: 0;
+    padding: 0;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .row .body .degree {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: row;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .row .body .degree .text {
+    font-family: 'Comfortaa', cursive;
+    color: #34c3e383;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .row .body .degree i {
+    margin-right: 15px;
+    font-size: 25px;
+    background-color: #34C2E3;
+    color: #34C2E3;
+    border-radius: 100%;
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .row .body .degree i.empty {
+    margin-right: 15px;
+    font-size: 25px;
+    background-color: transparent;
+    color: transparent;
+    border-radius: 100%;
+    box-shadow: rgba(50, 50, 93, 0.137) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.144) 0px 18px 36px -18px inset;
+}
+
+
+
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content {
+    padding: 0;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .left-side {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    min-width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .left-side .icon {
+    margin: 0 20px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .left-side .icon img {
+    font-size: 35px;
+    color: #8B2232;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .left-side .sub-title {
+    width: auto;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .left-side .sub-title span {
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side {
+    margin-left: 50px;
+}
+
+
+
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .card {
+    border: none;
+    box-shadow: none;
+    margin-top: 15px;
+    background-color: transparent;
+    border-bottom: 1px solid rgba(175, 175, 175, 0.171);
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .card:last-child {
+    border: none;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .card .card-title {
+    margin-bottom: 0;
+}
+
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .card .card-header {
+    padding: 0;
+    border: none;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .card .card-header .card-text {
+    font-family: 'Kanit', sans-serif;
+    font-weight: 600;
+    color: #5B616C;
+    font-size: 20px;
+
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .card .card-body {
+    margin-top: 30px;
+    padding: 15px 0px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+}
+
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .card .progress-bar {
+    background-color: #1a1a1a;
+    height: 20px;
+    width: 300px;
+    margin-top: 10px;
+    border-radius: 15px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .card .stripes {
+    background-size: 30px 30px;
+
+    background-image: linear-gradient(135deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .card .progress-bar-inner {
+    display: block;
+    height: 20px;
+    background-color: #34c2e3;
+    position: relative;
+    animation: 10s linear;
+
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .card .div-point {
+    position: absolute;
+    display: flex;
+
+    margin-top: 3px;
+    left: -25px;
+    justify-content: center;
+    flex-direction: column;
+    width: 310px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .card .div-point i {
+    font-size: 20px;
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    text-align: center;
+    color: #AFAFAF;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info .right-side .content .card .div-point span {
+    font-family: 'Kanit', sans-serif;
+    padding: 0;
+    margin-top: -7px;
+    width: 50px;
+    text-align: center;
+    color: #AFAFAF;
+    font-size: 15px;
+
+}
+
+/* Certificate-part */
+
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0;
+    /* background-color: #8B2232; */
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side {
+    width: 100%;
+    padding: 0;
+    margin-left: 0px;
+    margin-top: 30px;
+    height: 230px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content {
+    margin: 0;
+    height: 100%;
+    height: 230px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .swiper.mySwiper.std-aboutTab-certificates {
+    height: 100%;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .swiper.mySwiper.std-aboutTab-certificates .swiper-wrapper {
+    margin: 0;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .swiper.mySwiper.std-aboutTab-certificates .swiper-wrapper .swiper-slide {
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    height: 200px ;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .swiper.mySwiper.std-aboutTab-certificates .swiper-wrapper .swiper-slide .cover{
+    display: block;
+    width: 80% !important;
+    height: 100% !important;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .swiper.mySwiper.std-aboutTab-certificates .swiper-wrapper .swiper-slide img {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .swiper.mySwiper.std-aboutTab-certificates .swiper-pagination {
+    margin-bottom: -10px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .swiper.mySwiper.std-aboutTab-certificates .swiper-pagination .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .swiper.mySwiper.std-aboutTab-certificates .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    width: 12px;
+    height: 12px;
+    background-color: #34C2E3;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .swiper.mySwiper.std-aboutTab-certificates .swiper-button-next,
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .swiper.mySwiper.std-aboutTab-certificates .swiper-button-prev {
+    margin-top: -15px !important;
+    top: 50% !important;
+    transform: translateY(-50%);
+}
+
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .swiper.mySwiper.std-aboutTab-certificates .one-certificate {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .swiper.mySwiper.std-aboutTab-certificates .one-certificate:hover {
+    opacity: 0.7;
+}
+
+/* The Modal (background) */
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    padding-top: 100px;
+    /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    /* overflow: auto; Enable scroll if needed */
+
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.9);
+    /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .modal .modal-content {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .modal #modal-caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+}
+
+/* Add Animation */
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .modal .modal-content,
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .modal #modal-caption {
+    animation-name: cer-modal-caption-zoom;
+    animation-duration: 0.6s;
+}
+
+@keyframes cer-modal-caption-zoom {
+    from {
+        transform: scale(0.1)
+    }
+
+    to {
+        transform: scale(1)
+    }
+}
+
+/* The Close Button */
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .modal span.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .modal span.close:hover,
+#studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .modal span.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+    #studentUsersAbout .section-7.talents-information .row.body .body-content .info.certificate .right-side .content .modal .modal-content {
+        width: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---- */
+
+
+
+/** Section-9   Hobbies Information*/
+
+
+
+#studentUsersAbout .section-9.hobbies-information {
+    margin-top: 60px;
+    border-bottom: 1px solid #dedde0;
+}
+
+#studentUsersAbout .section-9.hobbies-information .row.title {
+    margin-bottom: 40px;
+}
+
+#studentUsersAbout .section-9.hobbies-information .row.title span {
+    font-family: 'PT Sans', sans-serif;
+    font-size: 23px;
+    font-weight: 700;
+    width: auto;
+}
+
+
+
+#studentUsersAbout .section-9.hobbies-information .row.body .body-content {
+    padding: 0;
+}
+
+#studentUsersAbout .section-9.hobbies-information .row.body .body-content .info {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    padding: 0;
+    margin-bottom: 30px;
+}
+
+#studentUsersAbout .section-9.hobbies-information .row.body .body-content .info .left-side {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    width: auto;
+    min-width: 250px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+}
+
+#studentUsersAbout .section-9.hobbies-information .row.body .body-content .info .left-side .icon {
+    margin: 0 20px;
+}
+
+#studentUsersAbout .section-9.hobbies-information .row.body .body-content .info .left-side .icon img {
+    font-size: 35px;
+    color: #8B2232;
+}
+
+#studentUsersAbout .section-9.hobbies-information .row.body .body-content .info .left-side .sub-title {
+    width: auto;
+}
+
+#studentUsersAbout .section-9.hobbies-information .row.body .body-content .info .left-side .sub-title span {
+    font-family: 'Roboto Slab', serif;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#studentUsersAbout .section-9.hobbies-information .row.body .body-content .info .right-side {
+    margin-left: 50px;
+    width: 100%;
+    height: auto;
+}
+
+#studentUsersAbout .section-9.hobbies-information .row.body .body-content .info .right-side .content {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#studentUsersAbout .section-9.hobbies-information .row.body .body-content .info .right-side .content .hobbie {
+    margin-bottom: 15px;
+    margin-right: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    padding: 10px 10px;
+    border-radius: 12px;
+}
+
+#studentUsersAbout .section-9.hobbies-information .row.body .body-content .info .right-side .content .hobbie .hobbie-name {
+    font-family: 'PT Sans', sans-serif;
+    text-transform: capitalize;
+}

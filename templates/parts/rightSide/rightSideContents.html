@@ -1,0 +1,143 @@
+{% block content %}
+
+<div id="rightSideContents" class="right-side-contents">
+    <div class="right-side__cover">
+        <div id="daily_weather_part" class="sum_weather_part">
+            <div class="weather-top">
+                <div id="weather-icon" class="weather-icon w1">
+
+                </div>
+                <div class="weather-info">
+                    <div class="degree-number">
+                        <span id="degree-number"></span>
+                        <span>C</span>
+                    </div>
+                    <div class="weather-wind">
+                        <img
+                            src="https://img.icons8.com/external-flat-juicy-fish/20/000000/external-wind-weather-flat-flat-juicy-fish-2.png" />
+                        <span id="weather-wind"></span> km/s
+                    </div>
+                    <div class="weather-temperatur">
+                        <div class="highest">
+                            <img src="https://img.icons8.com/ios-filled/20/FD334B/thermometer-up.png" />:
+                            <span id="highest-temp"></span>°
+                        </div>
+                        <div class="lower">
+                            <img src="https://img.icons8.com/ios-filled/20/0299FA/thermometer-down.png" />:
+                            <span id="lower-temp"></span>°
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="weather-bottom">
+                <div id="weather-prop" class="weather-prop">
+                </div>
+                <div class="recommendation">
+                    <img
+                        src="https://img.icons8.com/external-flat-juicy-fish/30/000000/external-warning-weather-flat-flat-juicy-fish.png" />
+                    <span>
+                        Şemsiyenizi yanınıza alın. Yağmur yağacak.
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="sum_trend_post_thisweek">
+            <div class="title">
+                <span class="bold">Bu Hafta</span>
+                <span>Trendleri</span>
+                <div></div>
+            </div>
+            <div class="trend-posts">
+                <a href="#" class="trend-post">
+                    <div class="left-post">
+                        <div class="post-title">
+                            5 GitHub Repositories for learning developers
+                        </div>
+                        <div class="post-time">
+                            3 dakikalık
+                        </div>
+                    </div>
+                    <div class="right-post">
+                        <img src="/static/img/IITC.jpg" alt="">
+                    </div>
+                </a>
+                <a href="#" class="trend-post">
+                    <div class="left-post">
+                        <div class="post-title">
+                            Refactoring If...Else Statement In JS
+                        </div>
+                        <div class="post-time">
+                            5 dakikalık
+                        </div>
+                    </div>
+                    <div class="right-post">
+                        <img src="/static/img/post6.jpg" alt="">
+                    </div>
+                </a>
+                <a href="#" class="trend-post">
+                    <div class="left-post">
+                        <div class="post-title">
+                            How to Install WSL 2 on Windows 10 (Updated)
+                        </div>
+                        <div class="post-time">
+                            12 dakikalık
+                        </div>
+                    </div>
+                    <div class="right-post">
+                        <img src="/static/img/post4.jpg" alt="">
+                    </div>
+                </a>
+                <a href="#" class="trend-post">
+                    <div class="left-post">
+                        <div class="post-title">
+                            Linux Mint's Sticky Notes App Works Great on Ubuntu
+                        </div>
+                        <div class="post-time">
+                            15 dakikalık
+                        </div>
+                    </div>
+                    <div class="right-post">
+                        <img src="/static/img/post5.jpg" alt="">
+                    </div>
+                </a>
+                <a href="#" class="trend-post">
+                    <div class="left-post">
+                        <div class="post-title">
+                            Firefox 95 Released, This is What’s New
+                        </div>
+                        <div class="post-time">
+                            9 dakikalık
+                        </div>
+                    </div>
+                    <div class="right-post">
+                        <img src="/static/img/post7.jpg" alt="">
+                    </div>
+                </a>
+            </div>
+            <div class="trend-tags">
+                <div class="table-head">
+                    <div class="tag-name">
+                        Etiket adı
+                    </div>
+                    <div class="tag-number">
+                        Post
+                    </div>
+                </div>
+                <ul class="trend-tag">
+                    <li><a href="#">#btk</a><span>143</span></li>
+                    <li><a href="#">#yazılım</a><span>125</span></li>
+                    <li><a href="#">#endüstri</a><span>118</span></li>
+                    <li><a href="#">#iuee</a><span>87</span></li>
+                    <li><a href="#">#mühendislik-fakültesi</a><span>82</span></li>
+                    <li><a href="#">#izu-kampus</a><span>55</span></li>
+                    <li><a href="#">#vizeler</a><span>43</span></li>
+                    <li><a href="#">#dersler</a><span>29</span></li>
+                    <li><a href="#">#okul-ücretleri</a><span>17</span></li>
+                    <li><a href="#">#mescitler</a><span>7</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,54 @@
+{% block content %}
+
+<div class="last__post__summary__row">
+    <div class="all_post_cover">
+        <div class="all_post_title">
+            <div class="title">
+                <img src="https://img.icons8.com/plumpy/36/000000/content.png" />
+                <span>En Sıcak</span> Postlar
+            </div>
+            <div class="left-right-buttons">
+                <div class="swiper-button-prev">
+                    <img src="https://img.icons8.com/ios-glyphs/50/E5433F/circled-left.png" />
+                </div>
+                <div class="swiper-button-next">
+                    <img src="https://img.icons8.com/ios-glyphs/50/233B55/circled-right.png" />
+                </div>
+            </div>
+        </div>
+        <div id="last__posts__swipper" class="swiper mySwiper all_post_content">
+            <div class="swiper-wrapper">
+                {% for instance in mainPageAllPosts_C %}
+                <div class="swiper-slide post_card">
+                    <div class="card-content">
+                        <div class="card-img">
+                            <img src="{{instance.image.url}}" alt="">
+                        </div>
+                        <div class="card-title">
+                            <a href="">{{instance.title}}</a>
+                        </div>
+                        <div class="card-desc">
+                            {{instance.subTitle}}
+                        </div>
+                    </div>
+                    <div class="card-info">
+                        <div class="user-img">
+                            <img src="{{instance.postUserProfile.profImage.url}}" alt="">
+                        </div>
+                        <div class="info">
+                            <div class="user-name">
+                                {{instance.post_owner.first_name}} {{instance.post_owner.last_name}}
+                            </div>
+                            <div class="small-info">
+                                {{instance.created_date|date:"F D"}} &middot; 6 dk okuma
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

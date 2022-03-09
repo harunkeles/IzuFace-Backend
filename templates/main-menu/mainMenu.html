@@ -1,0 +1,93 @@
+{% block content %}
+
+<link href="https://fonts.googleapis.com/css2?family=Rozha+One&display=swap" rel="stylesheet">
+
+<div id="mainMenu">
+    <div class="pageCover">
+
+        <section class="banner">
+            <input type="checkbox" id="menu-control" class="menu-control">
+            <div class="bg"></div>
+
+            <label for="menu-control" class="hamburger">
+                <i class="hamburger__icon"></i>
+                <i class="hamburger__icon"></i>
+                <i class="hamburger__icon"></i>
+            </label>
+
+
+            <aside class="sidebar">
+
+                <div class="nav-izu-face-logo">
+                    <img src="/static/img/logo-2.png" alt="" width="120" height="80">
+                </div>
+
+                <ul class="sidebar__menu">
+                    <li class="main-page">
+                        <a href="{% url 'mainPage' %}">
+                            <img src="https://img.icons8.com/fluency/36/000000/home.png" />
+                            <span>Anasayfa</span>
+                        </a>
+                    </li>
+                    <li class="news">
+                        <a href="">
+                            <img
+                                src="https://img.icons8.com/external-flatart-icons-flat-flatarticons/36/000000/external-news-news-flatart-icons-flat-flatarticons.png" />
+                            <span>Haberler</span></a>
+                    </li>
+                    <li class="activities">
+                        <a href="">
+                            <img src="https://img.icons8.com/cotton/40/000000/events--v2.png" />
+                            <span>Etkinlikler</span></a>
+                    </li>
+                    <li class="educations">
+                        <a href="">
+                            <img src="https://img.icons8.com/color/48/000000/school.png" />
+                            <span>Bölümler</span></a>
+                    </li>
+                    <li class="clups">
+                        <a href="">
+                            <img
+                                src="https://img.icons8.com/external-bearicons-gradient-bearicons/64/000000/external-club-graphic-design-bearicons-gradient-bearicons.png" />
+                            <span>Kulüpler</span></a>
+                    </li>
+                    <li class="suggestions">
+                        <a href="">
+                            <img
+                                src="https://img.icons8.com/external-victoruler-linear-colour-victoruler/64/000000/external-suggestion-business-and-finance-victoruler-linear-colour-victoruler.png" />
+                            <span>Öneriler</span></a>
+                    </li>
+                    <li class="complaint">
+                        <a href="">
+                            <img src="https://img.icons8.com/color/48/000000/complaint.png" />
+                            <span>Şikayetler</span></a>
+                    </li>
+                    <li class="izu-campus-info">
+                        <a href="https://kampus.izu.edu.tr/login">
+                            <img src="https://kampus.izu.edu.tr/js/favicon.ico" />
+                            <span>Kampüs Bilgi Sistemi</span></a>
+                    </li>
+
+                </ul>
+
+                <ul class="sidebar__bottom-menu">
+                    <li>
+                        <img src="https://img.icons8.com/material-rounded/36/000000/sun--v1.png" data-toggle="tooltip" data-placement="top" title="Gece görünümü"/>
+                    <li>
+                        <img src="https://img.icons8.com/color/36/000000/appointment-reminders--v1.png" />
+                    </li>
+                    <li>
+                        <img src="https://img.icons8.com/fluency/36/000000/username.png" />
+                    </li>
+                </ul>
+
+                <label for="menu-control" class="sidebar__close"></label>
+
+            </aside>
+
+
+        </section>
+    </div>
+</div>
+
+{% endblock %}

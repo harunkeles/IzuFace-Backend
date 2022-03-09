@@ -1,0 +1,336 @@
+#myProfilePage {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+
+#myProfilePage .pageCover {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+}
+
+#myProfilePage .pageCover .izu-face-logo{
+    position: fixed;
+    z-index: 9;
+    background-color: #F5F5F5;
+    width: 100%;
+    text-align: end;
+    padding-right: 10px;
+    padding-top: 10px;
+    box-shadow: rgba(27, 31, 35, 0.13) 5px 5px 15px, rgba(255, 255, 255, 0.25) 0px 1px 0px inset;
+
+}
+
+#myProfilePage .pageCover .izu-face-logo img{
+}
+
+#myProfilePage-background-design .background-img {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: url(/static/img/profilePageBg.jpg) center center fixed;
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+    /* opacity: 0.9; */
+}
+
+#myProfilePage-background-design .background-img::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-image: linear-gradient(120deg, #EEEDF3, #EEEDF3);
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}
+
+#myProfilePage-background-design .clip-bottom-left {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(290px at 0px 100%);
+    background-color: #8B2232;
+
+}
+
+#myProfilePage-background-design .clip-top-right {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    clip-path: circle(150px at 100% -1%);
+    background-color: #8B2232;
+
+}
+
+/*  */
+/*  */
+/* ! Main Container */
+/*  */
+/*  */
+#myProfilePage .container {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 150px;
+    margin-top: 150px ;
+
+
+}
+
+/* bg-img */
+#myProfilePage .container .row.bg-img {
+    /* background-color: rgb(255, 174, 69); */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#myProfilePage .container .row.bg-img .bg-img-cover {
+    margin: 0;
+    padding: 0;
+    width: 800px;
+    height: 300px;
+}
+
+#myProfilePage .container .row.bg-img .bg-img-cover .img-front-style {
+    position: absolute;
+    max-width: 800px;
+    width: 100%;
+    height: 300px;
+    opacity: 0.5;
+    background-image: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.486), rgb(0, 0, 0));
+    border-radius: 13px;
+    
+
+}
+
+#myProfilePage .container .row.bg-img .bg-img-cover img {
+    width: 100%;
+    height: 100%;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
+}
+
+/* * profilContent */
+#myProfilePage .container .row.profilContent {
+    background-color: rgb(250, 250, 250);
+    /* box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 3px 0px; */
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 8px, rgba(17, 17, 26, 0.05) 0px 3px 12px;
+    border-radius: 40px;
+    margin-top: -20px;
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+
+
+}
+
+/* profilContent image */
+#myProfilePage .container .row.profilContent .row.profil-img {
+    display: flex;
+    justify-content: center;
+    transform: translateY(-20%);
+    margin-top: -30px;
+}
+
+#myProfilePage .container .row.profilContent .row.profil-img .profil-img-cover {
+    margin: 0;
+    padding: 0;
+    width: 154px;
+    height: 154px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px; 
+}
+
+#myProfilePage .container .row.profilContent .row.profil-img .profil-img-cover img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 100%;
+}
+
+/* * profilContent profil-user-info */
+#myProfilePage .container .row.profilContent .row.profil-user-info {
+    /* background-color: #ffffff; */
+    width: 800px;
+}
+
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-left-info {}
+
+/*  */
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-left-info .user-name {
+    margin-bottom: 10px;
+}
+
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-left-info .user-name .name {
+    font-family: 'Roboto Slab', serif;
+    font-size: 25px;
+    font-weight: bold;
+    color: #5B616C;
+}
+
+/*  */
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-left-info .user-small-count {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 17px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-left-info .user-small-count .post-count {
+    margin-right: 20px;
+
+}
+
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-left-info .user-small-count .followers-count {
+    margin-right: 20px;
+}
+
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-left-info .user-small-count .follow-count {}
+
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-left-info .user-small-count .count {
+    font-family: 'Roboto Slab', serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: #5B616C;
+    margin-right: 5px;
+}
+
+/*  */
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-left-info .user-class {}
+
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-left-info .user-class i {
+    font-size: 18px;
+    margin-right: 10px;
+    color: #5B616C;
+}
+
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-left-info .user-class .class-name {
+    font-family: 'PT Sans', sans-serif;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-right-info {}
+
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-right-info .follow-button {}
+
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-right-info .follow-button a {
+    background-color: transparent;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 3px solid transparent;
+    color: #FAFAFA;
+    background: linear-gradient(150deg, #8b2232ab, #8B2232,#8b2232ab) ;
+    margin: 0;
+    padding: 10px 20px;
+    padding-top: 8px;
+    font-size: 19px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;    text-transform: capitalize;
+    font-weight: 500;
+    letter-spacing: 1px;
+    font-family: 'Kanit', sans-serif;
+    transition: 0.1s linear !important;
+    /* color: #5B616C; */
+    z-index: 1;
+}
+
+#myProfilePage .container .row.profilContent .row.profil-user-info .user-small-info .user-right-info .follow-button a:hover {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border: 3px solid #8b2232ab;
+    /* background: linear-gradient(150deg, #8B2232, #8B2232,#8B2232) 1s; */
+
+}
+
+
+/*  Read More Link Style  */
+#myProfilePage .profil-user-info .user-small-info .bottom {
+    margin-top: 30px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 18px;
+}
+
+#myProfilePage .profil-user-info .user-small-info .bottom .read-more-state {
+    display: none;
+}
+
+#myProfilePage .profil-user-info .user-small-info .bottom .read-more-target {
+    opacity: 0;
+    max-height: 0;
+    font-size: 0;
+    transition: .25s ease;
+}
+
+#myProfilePage .profil-user-info .user-small-info .bottom .read-more-state:checked~.read-more-wrap .read-more-target {
+    opacity: 1;
+    font-size: inherit;
+    max-height: 999em;
+}
+
+#myProfilePage .profil-user-info .user-small-info .bottom .read-more-state~.read-more-trigger:before {
+    content: 'Daha fazla oku';
+}
+
+#myProfilePage .profil-user-info .user-small-info .bottom .read-more-state:checked~.read-more-trigger:before {
+    content: 'Daha az oku';
+}
+
+#myProfilePage .profil-user-info .user-small-info .bottom .read-more-trigger {
+    cursor: pointer;
+    display: inline-block;
+    padding: 0 .5em;
+    color: #666;
+    font-size: .9em;
+    line-height: 2;
+    border: 1px solid #ddd;
+    border-radius: .25em;
+}
+
+/* User Tab Style */
+#myProfilePage .profil-user-info .user-tabs {
+    margin-top: 60px;
+}
+
+#myProfilePage .user-tabs ul.profil-page-main-tab {
+    /* border-bottom: 3px solid #666 ; */
+    margin-bottom: 30px;
+}
+
+#myProfilePage .user-tabs ul.profil-page-main-tab li.profil-page-main-tab-item {}
+
+#myProfilePage .user-tabs ul.profil-page-main-tab li.profil-page-main-tab-item a {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 700;
+    border-bottom: 4px solid #5b616c2c;
+    color: #5b616cc2;
+    font-size: 17px;
+    text-transform: capitalize;
+}
+
+#myProfilePage .user-tabs ul.profil-page-main-tab li.profil-page-main-tab-item a.active {
+    background-color: transparent !important;
+    border-bottom: 4px solid #5B616C;
+    color: #5B616C;
+    font-size: 19px;
+    margin-top: -2px;
+}
