@@ -108,6 +108,7 @@ class PostsWithFilterSerializer(serializers.ModelSerializer):
         representation['post_owner'] = {
             "id" : instance.post_owner.id,
             "full_name" : instance.post_owner.first_name + " " + instance.post_owner.last_name,
+            "username" : instance.post_owner.username,
             "profImage" : str(instance_post_owner.profImage),
             "studentId" : str(instance_post_owner.studentId),
             "backImage" : str(instance_post_owner.backImage),

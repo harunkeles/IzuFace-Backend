@@ -5,6 +5,7 @@ from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.response import Response
 
 from apiApp.models import AuthUserSiteSettingsModel
+from studentUsers.models import StudentUserProfileModel
 
 
 class AllUserSerializer(serializers.ModelSerializer):
@@ -22,7 +23,6 @@ class AuthUserSerializer(serializers.ModelSerializer):
 
 
 class CustomAuthToken(ObtainAuthToken):
-
     def post(self, request, *args, **kwargs):
         serializer = self.serializer_class(data=request.data,context={'request': request})
         serializer.is_valid(raise_exception=True)
@@ -41,3 +41,22 @@ class AuthUserSiteSettingsSerializer(serializers.ModelSerializer):
         model = AuthUserSiteSettingsModel
         fields = '__all__'
 
+
+
+class UserRankSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StudentUserProfileModel
+        fields = '__all__'
+
+
+class StudentUserProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StudentUserProfileModel
+        fields = '__all__'
+
+
+
+class WithSameDepartmentSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = StudentUserProfileModel
+        fields = '__all__'

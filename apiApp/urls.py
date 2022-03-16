@@ -12,6 +12,9 @@ urlpatterns = [
     path('login/', CustomAuthToken.as_view(), name='authUser'),
     path('auth-user-info/<int:pk>-<str:url>',  AuthUserInfoView.as_view(), name='authUserInfo'),
     path('auth-user-site-settings/<int:pk>',  AuthUserSiteSettingsView.as_view(), name='authUserSiteSettings'),
+    path('user-rank/<int:pk>',  UserRankView.as_view(), name='userRankView'),
+    path('std/<str:username>',  StudentUserView.as_view(), name='studentUserView'),
+    path('std/department/<str:department>',  WithSameDepartmentView.as_view(), name='withSameDepartment'),
 
 ]
 urlpatterns = format_suffix_patterns(urlpatterns)

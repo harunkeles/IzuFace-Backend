@@ -15,6 +15,7 @@ from rest_framework.authtoken.models import Token
 class StudentUserProfileModel(models.Model):
     is_active = models.IntegerField(default=1,choices=((1,'Aktif'),(0,'Pasif')),verbose_name="Öğrenci aktif mi?")
     user = models.OneToOneField(settings.AUTH_USER_MODEL,on_delete=models.CASCADE,verbose_name="Profil Sahibi")
+    user_rank = models.CharField(max_length=999,default=0,blank=False,editable=True,verbose_name='Kullanıcı rütbesi')
     studentId = models.CharField(max_length=9,null=True,blank=True,verbose_name="Öğrenci ID")
     backImage = models.ImageField(blank=True,null=True,default= 'static/bg.png',upload_to='studentUsers/background-image',verbose_name="Arka plan fotoğrafı")
     profImage = models.ImageField(blank=True,null=True,default= 'static/user-team.png',upload_to='studentUsers/profile-image',verbose_name="Profil fotoğrafı")
@@ -45,6 +46,7 @@ class StudentUserProfileModel(models.Model):
               )
     studentUserSocialMedia = MultiSelectField(choices=STUDENT_USER_SOCIAL_MEDIA,null=True,blank=True,verbose_name="İletişim bilgileri")
     following = models.ManyToManyField(settings.AUTH_USER_MODEL,editable=True,related_name="following",verbose_name="Kullanıcının takip ettikleri",null=True,blank=True) 
+
     slug = models.SlugField(unique=True,editable=True)
     
     # USERNAME_FIELD = 'studentId'
@@ -63,17 +65,6 @@ class StudentUserProfileModel(models.Model):
             self.slug = slugify(self.studentId)
             super(StudentUserProfileModel,self).save(*args,**kwargs)
         
-        backImage = Image.open(self.backImage.path)        
-        if backImage.height < 350 or backImage.width < 850 :
-            new_size = (800,300)
-            backImage.thumbnail(new_size)
-            backImage.save(self.backImage.path)
-
-        profImage = Image.open(self.profImage.path)        
-        if profImage.height < 160 or profImage.width < 160 :
-            new_size = (156,156)
-            profImage.thumbnail(new_size)
-            profImage.save(self.profImage.path)
 
     @property
     def thumbnail_preview(self):

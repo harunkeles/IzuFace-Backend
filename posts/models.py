@@ -89,7 +89,6 @@ class PostModel(models.Model):
         super(PostModel, self).save(*args, **kwargs)
         self.slug = slugify(self.title+"-"+str(self.id))
         
-
         image = Image.open(self.image.path)        
         if image.height < 350 or image.width < 650 :
             new_size = (650,350)
