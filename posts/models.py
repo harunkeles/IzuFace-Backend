@@ -72,7 +72,7 @@ class PostModel(models.Model):
     text = RichTextUploadingField(blank=False,verbose_name="Post Yazısı", help_text='Postun yazısını giriniz.',config_name='awesome_ckeditor')
     read_time = models.CharField(default="0",max_length=5,blank=False,verbose_name='Gönderi Okuma Süresi',editable=True)
     tag = models.ManyToManyField(TagModel, blank=True, related_name="postsTag",verbose_name='Post Etiketleri ', help_text='Postun etiketlerini seçiniz.')
-    image = models.ImageField(blank=True, null=True, default='static_img/empty-post-img.png',upload_to='blog/post/', verbose_name="Post Fotoğrafı ", help_text='Postun resmini seçiniz.')
+    image = models.ImageField(blank=True, null=True, default='static/light_logo.png',upload_to='blog/post/', verbose_name="Post Fotoğrafı ", help_text='Postun resmini seçiniz.')
     created_date = models.DateTimeField(editable=True,auto_now_add=False,default=datetime.now,blank=False, null=False, verbose_name="Post oluşturulma tarihi")
     modified_date = models.DateTimeField(editable=True,auto_now_add=False,auto_now=True,blank=False, null=False, verbose_name="Post güncelleme tarihi")
     likes = models.ManyToManyField(settings.AUTH_USER_MODEL,editable=True,related_name="post_likes",verbose_name="Postu beğenenler",null=True,blank=True) 
