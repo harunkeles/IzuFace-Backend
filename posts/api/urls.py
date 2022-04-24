@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import  PostsListView, PostDetailView, MainCategoriesListView,PostsWithFilterListView,GetLastPostsListView,PostsWithFilterDetailView, PostsWithUserRelatedPostsView
+from .views import  AllMiniPostTagsListView, MiniPostsCreateView, MiniPostsListView, MiniPostsUdateDeleteView, PostsListView, PostDetailView, MainCategoriesListView,PostsWithFilterListView,GetLastPostsListView,PostsWithFilterDetailView, PostsWithUserRelatedPostsView
 
 urlpatterns = [
     
@@ -10,5 +10,11 @@ urlpatterns = [
     path('postId=<int:pk>/', PostDetailView.as_view()),
     path('related_posts/userId=<int:pk>/', PostsWithUserRelatedPostsView.as_view()),
     path('main-categories/', MainCategoriesListView.as_view()),
+
+
+    path('mini-posts/', MiniPostsListView.as_view()),
+    path('mini-posts/<int:pk>', MiniPostsUdateDeleteView.as_view()),
+    path('mini-posts/create', MiniPostsCreateView.as_view()),
+    path('mini-post-tags/', AllMiniPostTagsListView.as_view()),
 
 ]

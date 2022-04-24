@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from posts.models import PostModel, MainCategoryModel,TagModel
+from posts.models import MiniPostModel, MiniPostTagModel, PostModel, MainCategoryModel,TagModel
 from studentUsers.models import StudentUserProfileModel
 from rest_framework.response import Response
 
@@ -169,3 +169,48 @@ class MainCategoriesSerializer(serializers.ModelSerializer):
     class Meta:
         model = MainCategoryModel
         fields = ['id','title']
+
+
+
+
+# Mini Posts
+
+
+
+class AllMiniPostTagsSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MiniPostTagModel
+        fields = '__all__'
+
+
+
+class MiniPostsSerializer(serializers.ModelSerializer):
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        representation['post_owner'] = instance.post_owner.first_name + " " + instance.post_owner.last_name
+
+        # tag title and tag color fields
+        tags = {}
+        tag_list = []
+        tag_count = instance.tag.count()
+        instance_tag = [val for val in MiniPostTagModel.objects.all() if val in instance.tag.all()]
+        for i in range(tag_count):
+            tags.setdefault(instance_tag[i].title,instance_tag[i].color) 
+
+        for key in tags:
+            tag_list.append((key, tags[key]))
+
+        representation['tag'] = tag_list
+
+
+        return representation
+
+    class Meta:
+        model = MiniPostModel
+        fields = '__all__'
+
+
+class MiniPostCreateSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = MiniPostModel
+        fields = '__all__'

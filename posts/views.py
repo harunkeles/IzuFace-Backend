@@ -36,3 +36,15 @@ def LikeView(request,pk):
         post.likes.add(request.user)
         liked = True
     return HttpResponseRedirect(reverse('all_posts'))
+
+
+def MiniPostLikeView(request,pk):
+    miniPost = get_object_or_404(MiniPostModel, id=request.POST.get('miniPost_id'))
+    liked = False
+    if miniPost.likes.filter(id=request.user.id).exists():
+        miniPost.likes.remove(request.user)
+        liked = False
+    else:
+        miniPost.likes.add(request.user)
+        liked = True
+    return HttpResponseRedirect(reverse('all_posts'))

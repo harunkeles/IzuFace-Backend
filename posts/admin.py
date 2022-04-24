@@ -30,7 +30,37 @@ class PostAdmin(admin.ModelAdmin):
     class Meta:
         model = PostModel
 
+
+# Mini Post
+
+class MiniPostAdmin(admin.ModelAdmin):
+    list_filter = ('text',)
+    list_display = ('thumbnail_preview','__str__','created_date','modified_date')
+    search_fields = ('text',)
+
+    class Meta:
+        model = MiniPostModel
+
+    #??? For displaying image in admin page
+    def thumbnail_preview(self, obj):
+        return obj.thumbnail_preview
+
+    thumbnail_preview.short_description = 'Thumbnail Preview'
+    thumbnail_preview.allow_tags = True
+#/////////////////////////////////////////////
+
+class MiniPostTagAdmin(admin.ModelAdmin):
+    list_filter = ('title',)
+    search_fields = ('title',)
+
+    class Meta:
+        model = MiniPostTagModel
+
+
+
 admin.site.register(MainCategoryModel, MainCategoryAdmin)
 admin.site.register(SubCategoryModel, SubCategoryAdmin)
 admin.site.register(TagModel, TagAdmin)
 admin.site.register(PostModel, PostAdmin)
+admin.site.register(MiniPostModel, MiniPostAdmin)
+admin.site.register(MiniPostTagModel, MiniPostTagAdmin)
