@@ -432,7 +432,6 @@ class StudentUserView(RetrieveUpdateAPIView):
                 following_list = []
                 for i in range(len(list(following_this_user))):
                     all_following_this_user = StudentUserProfileModel.objects.filter(id = following_this_user[i].user_id)
-                    print(all_following_this_user[0])
                     following_list.append(all_following_this_user[0].id)
 
                 # We find the followers count

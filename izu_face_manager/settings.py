@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'news',
     'posts',
     'discussions',
+    'appointments',
     'apiApp',
     'ckeditor',
     'ckeditor_uploader',

@@ -102,21 +102,16 @@ class MiniPostsCreateView(CreateAPIView):
 
     def post(self, request, *args, **kwargs):
 
-        print(request.data)
-        print(request.data["image"])
-
         # Tag listesini buluyoruz.
         tag = request.data["tag"]
-        print("tag : " , tag)
 
         tag_list = []
         for i in list(tag):
             if i != ',' :
                 print(i)
                 tag_list.append(int(i))
+                
         
-        print("tag_list : " , tag_list)
-
         # Eklenecek olan data'yı response'dan aldım ve objemi oluşturdum
         miniPostModel = MiniPostModel.objects.create(
             post_owner=request.user,
@@ -139,3 +134,43 @@ class MiniPostsCreateView(CreateAPIView):
             "post_owner": miniPostModel.post_owner.first_name + " " + miniPostModel.post_owner.last_name,
             "tag": tag_list,
         })
+
+
+
+
+
+
+class SingleUserMiniPostsListView(ListAPIView):
+    queryset = MiniPostModel.objects.all()
+    User = get_user_model()
+    serializer_class = MiniPostsSerializer
+
+    def get(self, request, pk=None, *args, **kwargs):
+        mini_posts = MiniPostModel.objects.filter(post_owner_id=pk)
+
+        tags =  MiniPostModel.objects.raw("Select * from posts_minipostmodel_tag where minipostmodel_id = %s",[mini_posts[0].id])
+
+        mini_posts_list = []
+        tag_list = []
+
+        for i in range(len(list(tags))):
+            tag_prop = MiniPostTagModel.objects.filter(id = tags[i].miniposttagmodel_id)
+            tag_list.append(tag_prop[0])
+
+        for i in range(len(mini_posts)):
+            post = {
+                'id': mini_posts[i].id,
+                'text': mini_posts[i].text,
+                'image': str(mini_posts[i].image),
+                'modified_date': mini_posts[i].modified_date,
+                'text': mini_posts[i].text,
+                # 'tag': (k for k in tag_list),
+                # 'likes': mini_posts[i].likes,
+            }
+            mini_posts_list.append(post)
+
+
+        return Response({
+            "mini_posts" : mini_posts_list
+        })
+

@@ -3,14 +3,12 @@ import uuid
 
 from sqlalchemy import false, null
 from izu_face_manager.settings import TIME_ZONE
-from datetime import datetime
 from django.db import models
 from django.conf import settings
 from django.db.models.deletion import CASCADE
 from django.template.defaultfilters import default, slugify, title
 from PIL import Image
 from django.db.models.signals import post_save
-import datetime
 from multiselectfield import MultiSelectField
 from ckeditor.fields import RichTextField
 from ckeditor_uploader.fields import RichTextUploadingField
@@ -139,7 +137,7 @@ class MiniPostTagModel(models.Model):
         self.slug = slugify(self.title)
         super(MiniPostTagModel, self).save(*args, **kwargs)
 
-
+    
 
 class MiniPostModel(models.Model):
     post_owner = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=CASCADE, default=1,verbose_name="Mini post sahibi",null=True, blank=True)
@@ -174,5 +172,3 @@ class MiniPostModel(models.Model):
         if likes_Q:
             liked = True
         return liked
-
- 

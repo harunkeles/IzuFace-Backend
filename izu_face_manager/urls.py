@@ -17,6 +17,7 @@ urlpatterns = [
     path('api/v0/news/',include('news.api.urls'), name='post-api'),
     path('api/v0/discussions/',include('discussions.api.urls'), name='discussions-api'),
     path('api/v0/student-user/',include('studentUsers.api.urls'), name='student-user-api'),
+    path('api/v0/appointments/',include('appointments.api.urls'), name='appointments-api'),
 
     # Side urls
     path('admin/', admin.site.urls),
