@@ -1,3 +1,4 @@
+from requests import delete
 from rest_framework.generics import ListAPIView, RetrieveAPIView, RetrieveUpdateDestroyAPIView, ListCreateAPIView, CreateAPIView
 from slugify import slugify
 from appointments.models import AppointmentModel
@@ -8,7 +9,7 @@ from rest_framework import status
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from django.contrib.auth import get_user_model
-from django.shortcuts import render
+from django.shortcuts import get_object_or_404, render
 from django.core.files.storage import FileSystemStorage
 from django.core.files import File
 
@@ -86,3 +87,30 @@ class AppointmentCreateView(CreateAPIView):
             "slug": appointmentModel.slug,
             "appointment_owner": appointmentModel.appointment_owner.first_name + " " + appointmentModel.appointment_owner.last_name,
         })
+
+
+
+
+# Single Delete Update
+class AppointmentUdateDeleteView(RetrieveUpdateDestroyAPIView):
+    queryset = AppointmentModel.objects.all()
+    serializer_class = AppointmentSerializer
+    
+    def delete(self, request, data):
+        
+        data = str(data)
+        day = ""
+        month = ""
+        hour = ""
+        if len(str(data)) == 5:
+            day =  "0" + data[0:1]
+            month = data[1:3]
+            hour = data[3:5]
+        else : 
+            day = data[0:2]
+            month = data[2:4]
+            hour = data[4:6]
+
+        obj = AppointmentModel.objects.filter(day = day, month = month, hour = hour).first()
+        obj.delete()
+        return Response({})
