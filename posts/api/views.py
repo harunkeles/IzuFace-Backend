@@ -1,6 +1,7 @@
 from rest_framework.generics import ListAPIView, RetrieveAPIView, RetrieveUpdateDestroyAPIView, ListCreateAPIView, CreateAPIView
 from slugify import slugify
 from posts.models import MiniPostModel, MiniPostTagModel, PostModel, MainCategoryModel
+from sentiment import sentiment
 from .serializers import AllMiniPostTagsSerializer, MiniPostCreateSerializer, MiniPostsSerializer, PostDetailSerializer, PostsSerializer, MainCategoriesSerializer, PostsWithFilterSerializer, PostsWithUserRelatedPostsSerializer
 from rest_framework.decorators import api_view
 from rest_framework import status
@@ -89,6 +90,29 @@ class MiniPostsListView(ListAPIView):
     serializer_class = MiniPostsSerializer
 
 
+class MiniPostsWithCategoryListView(ListAPIView):
+    queryset = MiniPostModel.objects.all()
+    serializer_class = MiniPostsSerializer
+
+    def get(self, request, pk=None, *args, **kwargs):
+        mini_posts = MiniPostModel.objects.filter(category=pk)
+
+        mini_posts_list = []
+        for i in range(len(mini_posts)):
+            post = {
+                'id': mini_posts[i].id,
+                'text': mini_posts[i].text,
+                'image': str(mini_posts[i].image),
+                'created_date': mini_posts[i].created_date,
+                'category': mini_posts[i].category,
+            }
+            mini_posts_list.append(post)
+
+        return Response({
+            "mini_posts": mini_posts_list
+        })
+
+
 # Single Delete Update
 class MiniPostsUdateDeleteView(RetrieveUpdateDestroyAPIView):
     queryset = MiniPostModel.objects.all()
@@ -107,14 +131,17 @@ class MiniPostsCreateView(CreateAPIView):
 
         tag_list = []
         for i in list(tag):
-            if i != ',' :
-                print(i)
+            if i != ',':
                 tag_list.append(int(i))
-                
-        
+
+
+        #Sentiment Analiz
+        sentimentA = sentiment(request.data["text"])
+
         # Eklenecek olan data'yı response'dan aldım ve objemi oluşturdum
         miniPostModel = MiniPostModel.objects.create(
             post_owner=request.user,
+            category=sentimentA,
             text=request.data["text"],
             image=request.data["image"],
         )
@@ -128,16 +155,13 @@ class MiniPostsCreateView(CreateAPIView):
             "id": miniPostModel.id,
             "text": miniPostModel.text,
             "image": str(miniPostModel.image),
+            "category": miniPostModel.category,
             "created_date": miniPostModel.created_date,
             "modified_date": miniPostModel.modified_date,
             "slug": miniPostModel.slug,
             "post_owner": miniPostModel.post_owner.first_name + " " + miniPostModel.post_owner.last_name,
             "tag": tag_list,
         })
-
-
-
-
 
 
 class SingleUserMiniPostsListView(ListAPIView):
@@ -148,13 +172,15 @@ class SingleUserMiniPostsListView(ListAPIView):
     def get(self, request, pk=None, *args, **kwargs):
         mini_posts = MiniPostModel.objects.filter(post_owner_id=pk)
 
-        tags =  MiniPostModel.objects.raw("Select * from posts_minipostmodel_tag where minipostmodel_id = %s",[mini_posts[0].id])
+        tags = MiniPostModel.objects.raw(
+            "Select * from posts_minipostmodel_tag where minipostmodel_id = %s", [mini_posts[0].id])
 
         mini_posts_list = []
         tag_list = []
 
         for i in range(len(list(tags))):
-            tag_prop = MiniPostTagModel.objects.filter(id = tags[i].miniposttagmodel_id)
+            tag_prop = MiniPostTagModel.objects.filter(
+                id=tags[i].miniposttagmodel_id)
             tag_list.append(tag_prop[0])
 
         for i in range(len(mini_posts)):
@@ -169,8 +195,6 @@ class SingleUserMiniPostsListView(ListAPIView):
             }
             mini_posts_list.append(post)
 
-
         return Response({
-            "mini_posts" : mini_posts_list
+            "mini_posts": mini_posts_list
         })
-

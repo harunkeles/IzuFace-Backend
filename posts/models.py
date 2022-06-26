@@ -142,6 +142,7 @@ class MiniPostTagModel(models.Model):
 class MiniPostModel(models.Model):
     post_owner = models.ForeignKey(settings.AUTH_USER_MODEL,on_delete=CASCADE, default=1,verbose_name="Mini post sahibi",null=True, blank=True)
     text = models.TextField(blank=True,null=True,verbose_name="Mini post Yazısı", help_text='Mini postun yazısını giriniz.')
+    category = models.CharField(max_length=2,blank=True,null=True,verbose_name="Mini post kategori", help_text='Mini post kategori')
     tag = models.ManyToManyField(MiniPostTagModel, blank=True, related_name="miniPostTag",verbose_name='Mini post etiketleri ', help_text='Mini postun etiketlerini seçiniz.')
     image = models.ImageField(blank=True, null=True,upload_to='blog/mini_posts/', verbose_name="Mini post fotoğrafı ", help_text='Mini postun resmini seçiniz.')
     created_date = models.DateTimeField(editable=True,auto_now_add=False,default=datetime.now,blank=False, null=False, verbose_name="Mini post oluşturulma tarihi")
